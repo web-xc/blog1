@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://c.webxc.ml/sitemap.xml
+Sitemap: https://c.webxc.ml//baidusitemap.xml

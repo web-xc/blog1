@@ -1,0 +1,300 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>来自2.5年前端小白的总结 | XC's Blog</title><meta name="keywords" content="前端技术栈"><meta name="author" content="XC's Blog"><meta name="copyright" content="XC's Blog"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="来自2.5年前端小白的总结（本文转自网络）先来个自我介绍，我是前端_图图，没错，是图图。趁着周末的时间好好回想了一下自己出来社会这两年多里所走的路，下面废话不多说，进入正题。 我是一名大专生(大专怎么了？大专也有成为大佬级别的人物)，在学校的时候学的是电子商务，其实上课学的都是什么HTML、CSS、Js、还有MySql、PHP这些。在大学里并没有怎么学，整天都是和舍友打游戏，什么LOL，毒奶粉之类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="来自2.5年前端小白的总结">
+<meta property="og:url" content="https://c.webxc.ml/posts/913502525.html">
+<meta property="og:site_name" content="XC&#39;s Blog">
+<meta property="og:description" content="来自2.5年前端小白的总结（本文转自网络）先来个自我介绍，我是前端_图图，没错，是图图。趁着周末的时间好好回想了一下自己出来社会这两年多里所走的路，下面废话不多说，进入正题。 我是一名大专生(大专怎么了？大专也有成为大佬级别的人物)，在学校的时候学的是电子商务，其实上课学的都是什么HTML、CSS、Js、还有MySql、PHP这些。在大学里并没有怎么学，整天都是和舍友打游戏，什么LOL，毒奶粉之类">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://npm.elemecdn.com/webxc@1.0.0/cover/web1.jpg">
+<meta property="article:published_time" content="2022-08-04T00:00:00.000Z">
+<meta property="article:modified_time" content="2022-10-22T13:29:51.979Z">
+<meta property="article:author" content="XC&#39;s Blog">
+<meta property="article:tag" content="前端技术栈">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://npm.elemecdn.com/webxc@1.0.0/cover/web1.jpg"><link rel="shortcut icon" href="https://npm.elemecdn.com/webxc@1.0.0/logo/logo.jpg"><link rel="canonical" href="https://c.webxc.ml/posts/913502525"><link rel="preconnect" href="//npm.elemecdn.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="https://cdn1.tianli0.top/gh/web-xc/blog1@c2a7976/css/index.css"><link rel="stylesheet" href="https://npm.elemecdn.com/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":500,"position":"top","messagePrev":"距离上次更新已经过了","messageNext":"天，文章所描述的内容可能已经发生变化，请留意。"},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":60,"languages":{"author":"作者: XC's Blog","link":"链接: ","source":"来源: XC's Blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"var(--wds-main)","bgDark":"var(--wds-main)","position":"bottom-center"},
+  source: {
+    jQuery: 'https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://npm.elemecdn.com/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://npm.elemecdn.com/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://npm.elemecdn.com/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://npm.elemecdn.com/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '来自2.5年前端小白的总结',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-10-22 21:29:51'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><link rel="stylesheet" href="https://npm.elemecdn.com/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://cdn1.tianli0.top/gh/web-xc/blog1@c2a7976/css/custom/realwds.css"><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="XC's Blog" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://npm.elemecdn.com/webxc@1.0.0/logo/logo.jpg" onerror="onerror=null;src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">61</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">21</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">20</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 文库</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-book-open"></i><span> 文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-th-large"></i><span> 全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 娱乐</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/gif/"><i class="fa-fw fab fa-yelp"></i><span> 每日动图</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐鉴赏</span></a></li><li><a class="site-page child" href="/media/"><i class="fa-fw fas fa-film"></i><span> 视频解析</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 网站</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-user-friends"></i><span> 友情链接</span></a></li><li><a class="site-page child" href="/tools/"><i class="fa-fw fas fa-tools"></i><span> 在线工具</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 我的</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-user-circle"></i><span> 关于本站</span></a></li><li><a class="site-page child" href="/sponsor/"><i class="fa-fw fab fa-bitcoin"></i><span> 赞赏博主</span></a></li><li><a class="site-page child" href="/statistics/"><i class="fa-fw fas fa-chart-pie"></i><span> 博客统计</span></a></li><li><a class="site-page child" href="/essay/"><i class="fa-fw fab fa-twitch"></i><span> 随笔说说</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><div id="blog_name"><a id="site-name" href="/">XC's Blog</a></div><div id="page-name"><a id="page-name-text" onclick="btf.scrollToDest(0,500)">来自2.5年前端小白的总结</a></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 文库</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-book-open"></i><span> 文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-th-large"></i><span> 全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 娱乐</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/gif/"><i class="fa-fw fab fa-yelp"></i><span> 每日动图</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐鉴赏</span></a></li><li><a class="site-page child" href="/media/"><i class="fa-fw fas fa-film"></i><span> 视频解析</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 网站</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-user-friends"></i><span> 友情链接</span></a></li><li><a class="site-page child" href="/tools/"><i class="fa-fw fas fa-tools"></i><span> 在线工具</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 我的</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-user-circle"></i><span> 关于本站</span></a></li><li><a class="site-page child" href="/sponsor/"><i class="fa-fw fab fa-bitcoin"></i><span> 赞赏博主</span></a></li><li><a class="site-page child" href="/statistics/"><i class="fa-fw fas fa-chart-pie"></i><span> 博客统计</span></a></li><li><a class="site-page child" href="/essay/"><i class="fa-fw fab fa-twitch"></i><span> 随笔说说</span></a></li></ul></div></div></div><div id="nav-right"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div id="darkmode_navswitch"><a class="site-page darkmode_switchbutton" onclick="navFn.switchDarkMode()"><i class="fas fa-adjust">     </i></a></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></div></nav><div class="coverdiv loaded" id="coverdiv"><img id="post-cover" src="https://npm.elemecdn.com/webxc@1.0.0/cover/web1.jpg" alt="cover"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><span class="post-meta-categories"><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E6%A0%88/">前端技术栈</a></span><span class="post-meta-date"><time datetime="2022-08-04T00:00:00.000Z" title="2022-08-04 08:00:00">2022-08-04</time></span></div></div><h1 class="post-title">来自2.5年前端小白的总结</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-wordcount"><i class="fas fa-file-word fa-fw post-meta-icon"></i><span class="word-count">4.4k</span><i class="fas fa-stopwatch fa-fw post-meta-icon"></i><span>12分钟</span></span><span class="post-meta-pv-cv" id="" data-flag-title="来自2.5年前端小白的总结"><i class="fab fa-hotjar fa-fw post-meta-icon"></i><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><div id="article-all"><article class="post-content" id="article-container"><h4 id="来自2-5年前端小白的总结（本文转自网络）"><a href="#来自2-5年前端小白的总结（本文转自网络）" class="headerlink" title="来自2.5年前端小白的总结（本文转自网络）"></a>来自2.5年前端小白的总结（本文转自网络）</h4><p>先来个自我介绍，我是前端_图图，没错，是图图。趁着周末的时间好好回想了一下自己出来社会这两年多里所走的路，下面废话不多说，进入正题。</p>
+<p>我是一名大专生(大专怎么了？大专也有成为大佬级别的人物)，在学校的时候学的是电子商务，其实上课学的都是什么HTML、CSS、Js、还有MySql、PHP这些。在大学里并没有怎么学，整天都是和舍友打游戏，什么LOL，毒奶粉之类的，浪费了三年时光。然后去南宁实训了三个月，当时选的班级是前端，为什么选前端呢？因为在学校的时候学了一点，也有一丢丢的基础。</p>
+<h3 id="从学校到社会"><a href="#从学校到社会" class="headerlink" title="从学校到社会"></a>从学校到社会</h3><p>18年9月份从学校出来找工作，出来之后就没有玩过游戏了，被社会一顿毒打，经过很多挫折磨难，刚开始去面试的时候基本都是遇到一些培训机构，当时只要有面试邀请都非常的开心，但是上度娘一搜都是xxx培训机构什么的，只能吐槽深圳的培训机构是真的多。</p>
+<h3 id="第一份工作"><a href="#第一份工作" class="headerlink" title="第一份工作"></a>第一份工作</h3><p>过了两个星期之后终于有了希望，收到一家外包公司的邀请，然后就去了。也是创业型公司，才几个人。两个后端一个小姐姐前端一个UI加上老板就五个人。然后我也被这家公司录取了，当时跟老板谈的是3k一月。在里面只是用jQuery和原生js写一个管理系统。我回想当时我的前端基础那叫一个差，后来我就买了一本HTML+Css+JavaScript网页设计从入门到精通和一本锋利的jQuery来学。放在现在这两本书对我来说并没有什么用了。</p>
+<p>公司有个电商项目给另一个前端小姐姐做，当时她也是刚学完<code>Vue</code>，然后就用<code>Vue</code>做这个项目，我就产生了好奇。我就去网上找教程，找到了Vue仿美团的教程，感觉质量还行，然后就学了两个星期。只是入了个门。当时对ES6、webpack、Git都不知道是个啥东西，就照着视频教程里面敲。项目差不多完成之后，那位小姐姐就跑路了。就等于丢了个坑给我。而且我基础又差。后面加了个需求，需要调后端接口，我弄了两天，那时候的我对ajax一无所知。后来请了大学老师和技术胖群里的一位大佬帮我解决了。从此对前端产生了好感。我在这家公司待了一个月才发现自己是无薪的。另外一个前端也跑了，后来我也跑了。继续找下家。</p>
+<h3 id="第二份工作"><a href="#第二份工作" class="headerlink" title="第二份工作"></a>第二份工作</h3><p>在家待了三四天吧。又收到了面试邀请。也是一家小公司，开的薪资是3.5k，去面试的时候就看到两个人，老板和一个UI。这家公司是做小程序的。还好我在出来找工作的时候，学了一丢丢的程序。我拿了我之前学的Vue仿美团的项目给他看。他觉得还可以。成功找到了第二份工作。</p>
+<p>我只在这家公司做了一个星期就离职了。原因很简单。老板要求加班，我对加班并没有什么反感，但是距离公司有点远，当时住在龙岗，公司在华强北的赛格大厦。下班回到家已经很晚了。而且我住的地方离地铁站有点远。还要坐一趟公交出来才到，公交晚上八点半就没有了。而且后端还是一个兼职的后端。然后我故意表现得不好，然后老板就把我开了。得了七百多块钱薪水。然后我用这个钱去买了一本阮大佬的ES6，还有高级程序设计3来学。</p>
+<h3 id="第三份工作"><a href="#第三份工作" class="headerlink" title="第三份工作"></a>第三份工作</h3><p>当时在家投简历看小程序的教程，当时并没有练，只是一直在看。收到了面试的邀请非常兴奋的就去。找了一家做家居和新媒体运营的小公司。也是几个人而已。开的薪资也是3.5k，做一个家居的小程序，也是没有后端，当时老板只是口头上说要招，其实我已经看出来他并不想招，原因很简单，成本高。小公司一般都是这样。想让我自己一个人搞定，我当时的基础并不好，别说后端了。当时我写的小程序除了写一些简单的样式，其余的什么购物车和登录都是复制粘贴网上的。然后过半个月我已经写好了。老板问我能不能上线，我直接懵了，连个后端都没有还谈上线。我很记得有一次，他找我谈话，问我会不会大数据，人工智能这些。我只能告诉他，用什么语言写。</p>
+<p>唉，很悲哀，这些不懂的人都以为一个程序员什么大数据人工智能都会。我心里想，如果我会？我还在你这家破公司待？后面小程序项目取消，直接去第三方卖一个。后面又叫我负责做一个官网，其实是一个门户网。用织梦二次开发的。公司买了台服务器给我搞，还好我有一些同学搞<code>SEO</code>优化和二次开发的。我对二次开发并没有什么兴趣，然后我就没做，就托付他们帮我弄。上班的时候就叫他们远程来帮我搞。后来做出来老板不满意不是他们想要的效果，老板就把我开了。那时候刚好是元旦，刚好入职一个月。开心的拿到了3.5k薪资。回去继续找工作。</p>
+<h3 id="第四份工作"><a href="#第四份工作" class="headerlink" title="第四份工作"></a>第四份工作</h3><p>第四份工作，也是做小程序的。也是一家创业型公司。做旅游行业的，据说创业失败，然后转型做软件了。三个人，老板+后端都是95后。在一个民房里面办公，也就是老板的家，老板是深圳本地人。福田和龙华都有房，一个富二代，办公就在龙华。当时心想，终于找到一个有后端的公司了。因为经过前面两家公司都没有后端已经怕了。面试完之后，回去等通知。晚上发消息告诉我，周一上班，给出的薪资试用期3k，转正4k。当时没想那么多。有工作就去了。</p>
+<p>我记得当时我连获取<code>input</code>框的值和一个<code>ifelse</code>都不会，都是靠百度或者问群友才会。最最记得的写<code>ifelse</code>判断Tabbar跳转对应的页面都写不出来，更别说<code>for</code>循环了。后面问了一个群友加她好友远程帮我写出来的。注意我的用词<code>她</code>，是一位前端小姐姐。才发现我的技术那么烂。好在公司的两个后端，我不会的他们都会教我给我思路。教我用<code>for</code>循环和小程序的网络请求<code>request</code>。当时遇到不会的就百度，问群友帮忙解决。自己的技术很烂，并没有放弃，每天都肝到凌晨才睡。住也是住在公司，因为是民房，两房一厅。在客厅办公。有时间去看书充电。后面会讲到我的学习之路。</p>
+<p>在这家公司干了一年，做了好几个项目，刚开始进去的时候是做公司的产品，后面老板就一直没有理会了，然后又接了几个外包项目做。今年一月份就离职回老家了。离职的原因很简单：老板是一个花父母的钱养员工的。而且很懒，不负责任，画饼专家，做了好几个项目都是烂项目。没一个能挣到钱的，而且弄完设计图就去睡觉。直接睡一天的那种，睡醒就起来吃，吃完就出去泡吧喝酒。不讲武德，来骗来忽悠我这个22岁的前端新同志。整天对我画饼，我也是离职之后才明白这些事情，还是我太年轻了太单纯了。这次教训之后我才懂得，有些话听听就好，不要当真。当然，在这家公司是我成长最快的，我学到的东西还挺多的。也把自己学<code>Vue</code>用到了项目当中，去年年底还趁有时间去学了技术胖出的<code>React</code>教程。也把<code>React</code>应用了到我在这家公司做的最后一个项目里面。</p>
+<h3 id="现在的工作"><a href="#现在的工作" class="headerlink" title="现在的工作"></a>现在的工作</h3><p>我现在待的这家公司是做跨境电商的，创业型公司，福利基本的都有，十来个人，有<code>3</code>个后端，<code>1</code>个UI、<code>1</code>个测试、加我就是<code>2</code>个前端。所用到的技术栈：PC端是<code>React</code>，移动端是<code>Taro</code>开发H5、小程序。刚进去的时候主要是负责开发PC端的电商平台，我和另一个前端大哥。后面PC正式上线之后，就开发了小程序，不得不说<code>Taro</code>的坑有点多。把小程序做完之后，又接着开发<code>H5</code>，开发<code>H5</code>只是把小程序的代码复制一份把不兼容<code>H5</code>修修改改。到八月中旬团队规模已经有六十几个人，技术部占了一半。<code>6</code>个前端、<code>9</code>个后端、<code>4</code>个测试、<code>2</code>IOS、<code>2</code>安卓、产品、产品助理、UI、运维都是一个。非常开心第一次加入这种配置比较好的公司，我们前端主要负责公司的电商平台，还有一个分销系统。接触到的东西还是挺多的，公司的氛围和同事们都挺好的。</p>
+<p>我换了这么多家公司的主要原因：一是自己太过盲目渴望工作，并没有好好得去选。二是从第二第三家公司都没有做编程或者技术主管和项目经理之类的职务。这些公司希望同学们就不要考虑了。去那些起码有个后端的公司。技术牛的人，可以直接选择大厂。不管自己什么学历，试试才知道自己能不能进。如果身边有些朋友公司招人的话，可以选择内推。</p>
+<h3 id="成长总结"><a href="#成长总结" class="headerlink" title="成长总结"></a>成长总结</h3><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/qdjy%20(2).jpg" alt="图片" style="zoom:33%;" />
+
+<ol>
+<li>要养成一个有时间就给自己充电的习惯，这里说说我是怎么从一个连<code>for</code>循环、<code>ifelse</code>都不会的渣渣到一个前端工程师的路程。当然，非常感谢第四家公司的老板和后端大哥给了我一次机会，主要是后端大哥在我遇到困难的时候总会给我思路。当然也少不了我的大招JavaScript高级程序设计3这个书。看过的都说好，当然现在也有了第四版。我没买。在第四家公司我基本上是有空我就去翻高级程序设计3这本书，看看是不会的，一定要动手照着书上敲，去理解。这是我大学老师跟我说的，也是我的恩师。不理解就百度找例子看看别人是怎么说这个知识点的。换种方式去理解。遇到难的实在不行就打断点开控制台，看执行看结果。你就能明白了。学了这本书之后我终于知道面试常问的闭包，原型，原型链，面向对象，事件冒泡，事件委托，函数防抖，函数节流等等这些概念。去理解这些知识点会发现非常有趣。我当时都是怀着一个期待的心去看这些知识点，想知道它到底是个什么东西。这本书我学了一年才学完(毕竟还要工作赶项目)。有空就看，甚至有时候看到凌晨。基本每天必看的书，也把里面的图和重要知识点画出来记下来。我的基础也是因为有了这本书才慢慢提升的。</li>
+<li>今年八九月份的时候，我的老师打电话给我，叫我回去跟学弟学妹们做个演讲。阐述一遍自己从学校到社会的一个经历，是怎么从一个学渣到一个班级里优秀的学生过程。我回去跟我的老师聊了这些年出社会的各方面，也请他吃了顿饭。来报答这几年对我的教诲。当时我最记得他说的那句话：班里成绩最好的，并不代表出去混得最好。当然也少不了自己的坚持。我大学的室友(也是我的朋友)的一句名言:坚持你所坚持的。这两句话使我在前端这个职业没有轻易放弃，一直都在坚持下去的原因。发现自己缺哪方面的知识就买什么书来学。看不一定会，要动手多实践，这是一个实践的行业。实践才是检验真理的唯一。</li>
+<li>还有不要怕犯错，知错就改。这次在这件事上做得不好，及时调整自己，记住这次的教训。下次不要再让类似的情况发生。我就是这么过来的。在职业生涯里肯定难免几次犯错。</li>
+<li>不要沉迷于游戏，我出来之后的一两年里基本很少玩游戏，基本都是回家过年的时候才会玩。回深圳之后，就迅速调整自己。不碰游戏，专注于自己的技术。当你想玩游戏的之前，想想自己的处境，自己的技术是不是很牛了？这样才会放弃玩游戏的欲望。偶尔玩玩没事儿，适当放松放松。但是不要太过于放纵自己。</li>
+<li>也要学会投资自己，打个比方说，买本跟自己技术相关的书、一个视频教程、一个能提高自己学习效率的工具(Mac)。付出了总会有回报的。</li>
+<li>现阶段的我，在前端这个职业里，会把技术放在第一位，薪资第二位。技术提升了，薪资自然也会提升。所以一些刚步入社会的前端同学，有机会就去尝试，不要错过每次的面试机会。不要太纠结薪资的问题，能够养活自己就好。学到东西，提升自己的技术才是硬道理。</li>
+<li>我个人觉得看书虽然效率慢，但能够知道很多知识点，而且讲得很细。而看视频教程呢，效率比较高，但是讲得并不深。所以我还是选择看书比较好。这就是我的成长总结，也算是一些建议。勿喷，每个人对每件事的观点看法都不一样，我只是说我自己的一些看法。我所学的，所努力，所做的这些都是为了给家人为自己争口气。</li>
+</ol>
+<h3 id="自己的不足"><a href="#自己的不足" class="headerlink" title="自己的不足"></a>自己的不足</h3><ol>
+<li>慢慢的发现自己对业务这一块了解的并不是很多，毕竟只是单方面对技术过多的去弥补，并没有考虑过业务的东西。产品提需求就做，并没有仔细的想过这个功能对这个项目的价值在哪？我遇到过很多次都是做出来了这个功能，结果完全没用上，到最后直接被砍掉的情况。</li>
+<li>一个技术问题死磕到底。中间就没停过，就连通勤、吃饭、洗澡、睡觉前都会在反复的去想这个问题用什么比较好一点的方案去实现，或者这个功能用什么比较好的方法去优化呢？</li>
+</ol>
+<p>以上只是举了一两个我个人比较严重的不足之处，当然也有在学习相关的书籍和资料，补充自己不足。</p>
+<h3 id="未来的职业规划"><a href="#未来的职业规划" class="headerlink" title="未来的职业规划"></a>未来的职业规划</h3><p>不求进大厂，只求通过自己不断努力提升自己的技术，对标大厂P级别，这就是我未来的目标。如果能进那就最好。我要打破一个大专学历的渣渣也能成为大佬级别的人。</p>
+<h3 id="年总结"><a href="#年总结" class="headerlink" title="年总结"></a>年总结</h3><p>今年也给自己立了几个目标，一是学完ES6，二是买一台MacBookPro，都如期的完成了。感觉自己今年学到的东西挺多哒，很开心自己又成长啦🎉🎉🎉，也提前完成了今年的目标啦。另外还看了几本关于自己职业的相关书籍啦。知道如何从一个新手到大师的过程和所具备的思维方式。还有一些学习方式。这基本对于我们程序员来说最好不过了，推荐大家看。自己的收获满满哒。最惊喜的是自己还弄了一个服务器。虽然最后两三个月自己有点网瘾有点颓废。但是看看银行卡余额学习的动力就来啦。2020年马上就要过去了，虽然说是一个不好的年，但是我们都要一起努力加油！新的一年新目标。数据结构，设计模式，冲鸭！</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/qdjy%20(1).jpg" alt="图片" style="zoom:50%;" /><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/qdjy%20(3).jpg" alt="图片" style="zoom:50%;" /></p>
+<h4 id="结尾：本文转自微信（JS每日一题），作为正在学习前端的朋友，也是一种对前端行业的认识吧！"><a href="#结尾：本文转自微信（JS每日一题），作为正在学习前端的朋友，也是一种对前端行业的认识吧！" class="headerlink" title="结尾：本文转自微信（JS每日一题），作为正在学习前端的朋友，也是一种对前端行业的认识吧！"></a>结尾：本文转自微信（<a target="_blank" rel="noopener external nofollow noreferrer" href="https://mp.weixin.qq.com/s/EH4KsSWsKI3ohJDtJUwz_Q">JS每日一题</a>），作为正在学习前端的朋友，也是一种对前端行业的认识吧！</h4></article><div class="post-tools"><div class="post-tools-left"><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-hamburger"></i> 打赏作者</div><div class="reward-main"><ul class="reward-all"><ul class="reward-group"><li class="reward-item"><a href="https://npm.elemecdn.com/webxc@1.0.0/lxfs/wechat.png" rel="external nofollow noreferrer" target="_blank"><img class="post-qr-code-img" src="https://npm.elemecdn.com/webxc@1.0.0/lxfs/wechat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/webxc@1.0.0/lxfs/alipay.jpg" rel="external nofollow noreferrer" target="_blank"><img class="post-qr-code-img" src="https://npm.elemecdn.com/webxc@1.0.0/lxfs/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/sponsor/#特别鸣谢"><div class="reward-text">赞赏名单</div><div class="reward-dec">感谢给予支持的朋友，您的支持是我前进的动力。</div></a></ul></div></div><div class="post_share"><div class="social-share" data-image="https://npm.elemecdn.com/webxc@1.0.0/cover/web1.jpg" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn1.tianli0.top/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://npm.elemecdn.com/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E6%A0%88/">#前端技术栈</a></div></div></div></div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-info"><span>来自2.5年前端小白的总结</span></span></div><div class="post-copyright__type"><span class="post-copyright-info"><a href="https://c.webxc.ml/posts/913502525.html">https://c.webxc.ml/posts/913502525.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-info">本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://c.webxc.ml" target="_blank">XC's Blog</a></span></div></div></div><div id="pagination-con"><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/275944188.html"><img class="prev-cover" src="https://npm.elemecdn.com/webxc@1.0.0/cover/cover13.jpg" onerror="onerror=null;src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">如何买到合适的域名</div></div></a></div><div class="next-post pull-right"><a href="/posts/2060334811.html"><img class="next-cover" src="https://npm.elemecdn.com/webxc@1.0.1/cover/git1.jpg" onerror="onerror=null;src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Git常用命令</div></div></a></div></nav></div><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 猜你喜欢</span></div><div class="relatedPosts-list"><div class="post grid"><div class="grid-img"><a href="/posts/4a24.html" title="前端路线"><img class="cover" src="https://npm.elemecdn.com/webxc@1.0.0/cover/web1.jpg" alt="cover"></a></div><a class="grid-cat" href="/categories/前端技术栈/">前端技术栈</a><div class="grid-title"><a href="/posts/4a24.html" title="前端路线">前端路线</a></div><div class="grid-meta"><span class="times"><i class="far fa-calendar-alt fa-fw"></i> 2022-10-05</span></div></div><div class="post grid"><div class="grid-img"><a href="/posts/322740304.html" title="移动端最佳适配解决方案"><img class="cover" src="https://npm.elemecdn.com/webxc@1.0.0/cover/cover12.jpg" alt="cover"></a></div><a class="grid-cat" href="/categories/前端技术栈/">前端技术栈</a><div class="grid-title"><a href="/posts/322740304.html" title="移动端最佳适配解决方案">移动端最佳适配解决方案</a></div><div class="grid-meta"><span class="times"><i class="far fa-calendar-alt fa-fw"></i> 2022-08-05</span></div></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar"><div class="author-info__sayhi" id="author-info__sayhi">👋 你好！我是</div><div class="author-info__name">XC's Blog</div><div class="author-info__description">我会在这里分享踩过的坑，干货笔记，以及生活中的感悟、吐槽、看法，与君共勉。</div><div class="author-info__description2">精致的五官是心动的开始，迷人的气质是动情的深渊。</div><a class="author-info__avatar" href="/about/"><img class="avatar-background" src="https://cdn1.tianli0.top/gh/realwds/cdn@master/person/awds-79k.png" onerror="this.onerror=null;this.src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="avatar"/></a></div><div class="card-info-social-icons"><a class="social-icon" href="https://c.webxc.ml/"><i class="fab fa-edge"></i></a><a class="social-icon" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/web-xc"><i class="fab fa-github"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content"><p>有问题评论留言，微信不解答问题，添加请注明来意。</p><div class="content_qrcode"><img src="https://npm.elemecdn.com/webxc@1.0.0/lxfs/wechat.jpg" alt="添加微信"></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9D%A5%E8%87%AA2-5%E5%B9%B4%E5%89%8D%E7%AB%AF%E5%B0%8F%E7%99%BD%E7%9A%84%E6%80%BB%E7%BB%93%EF%BC%88%E6%9C%AC%E6%96%87%E8%BD%AC%E8%87%AA%E7%BD%91%E7%BB%9C%EF%BC%89"><span class="toc-text">来自2.5年前端小白的总结（本文转自网络）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8E%E5%AD%A6%E6%A0%A1%E5%88%B0%E7%A4%BE%E4%BC%9A"><span class="toc-text">从学校到社会</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E4%BB%BD%E5%B7%A5%E4%BD%9C"><span class="toc-text">第一份工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E4%BB%BD%E5%B7%A5%E4%BD%9C"><span class="toc-text">第二份工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E4%BB%BD%E5%B7%A5%E4%BD%9C"><span class="toc-text">第三份工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E4%BB%BD%E5%B7%A5%E4%BD%9C"><span class="toc-text">第四份工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%B0%E5%9C%A8%E7%9A%84%E5%B7%A5%E4%BD%9C"><span class="toc-text">现在的工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%90%E9%95%BF%E6%80%BB%E7%BB%93"><span class="toc-text">成长总结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%8D%E8%B6%B3"><span class="toc-text">自己的不足</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AA%E6%9D%A5%E7%9A%84%E8%81%8C%E4%B8%9A%E8%A7%84%E5%88%92"><span class="toc-text">未来的职业规划</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B4%E6%80%BB%E7%BB%93"><span class="toc-text">年总结</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%93%E5%B0%BE%EF%BC%9A%E6%9C%AC%E6%96%87%E8%BD%AC%E8%87%AA%E5%BE%AE%E4%BF%A1%EF%BC%88JS%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98%EF%BC%89%EF%BC%8C%E4%BD%9C%E4%B8%BA%E6%AD%A3%E5%9C%A8%E5%AD%A6%E4%B9%A0%E5%89%8D%E7%AB%AF%E7%9A%84%E6%9C%8B%E5%8F%8B%EF%BC%8C%E4%B9%9F%E6%98%AF%E4%B8%80%E7%A7%8D%E5%AF%B9%E5%89%8D%E7%AB%AF%E8%A1%8C%E4%B8%9A%E7%9A%84%E8%AE%A4%E8%AF%86%E5%90%A7%EF%BC%81"><span class="toc-text">结尾：本文转自微信（JS每日一题），作为正在学习前端的朋友，也是一种对前端行业的认识吧！</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/7f86.html" title="JavaScript 第四天"><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/postss/js1.jpg" onerror="this.onerror=null;this.src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="JavaScript 第四天"/></a><div class="content"><a class="title" href="/posts/7f86.html" title="JavaScript 第四天">JavaScript 第四天</a><time datetime="2023-02-07T06:00:00.000Z" title="发表于 2023-02-07 14:00:00">2023-02-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/6e+47.html" title="JavaScript 第三天"><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/postss/js1.jpg" onerror="this.onerror=null;this.src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="JavaScript 第三天"/></a><div class="content"><a class="title" href="/posts/6e+47.html" title="JavaScript 第三天">JavaScript 第三天</a><time datetime="2022-12-27T15:30:00.000Z" title="发表于 2022-12-27 23:30:00">2022-12-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/623e.html" title="JavaScript 第二天"><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/postss/js1.jpg" onerror="this.onerror=null;this.src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="JavaScript 第二天"/></a><div class="content"><a class="title" href="/posts/623e.html" title="JavaScript 第二天">JavaScript 第二天</a><time datetime="2022-12-05T09:00:00.000Z" title="发表于 2022-12-05 17:00:00">2022-12-05</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-social"><a class="deal_link" href="https://github.com/web-xc" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="deal_link" href="https://gitlab.com/web-xc" rel="external nofollow noreferrer" target="_blank" title="GitLab"><i class="fab fa-gitlab"></i></a><a class="deal_link" href="https://gitee.com/web-xc" rel="external nofollow noreferrer" target="_blank" title="Gitee"><i class="fab fa-github-alt"></i></a><img class="footer_mini_logo" src="https://npm.elemecdn.com/webxc@1.0.0/logo/logo.jpg" onerror="this.onerror=null;this.src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="回到顶部" onclick="btf.scrollToDest(0,500)"/><a class="deal_link" href="tencent://message/?uin=2848141597&amp;Site=&amp;Menu=yes" rel="external nofollow noreferrer" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="deal_link" href="mailto:2848141597@qq.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="deal_link" href="/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss"></i></a></div><div id="footer-container"><div class="footer-group"><h3 class="footer-title">关于</h3><div class="footer-links"><a class="footer-item" href="/about/">关于本站</a><a class="footer-item" href="/sponsor/">赞赏博主</a><a class="footer-item" href="/statistics/">博客统计</a></div></div><div class="footer-group"><h3 class="footer-title">文章</h3><div class="footer-links"><a class="footer-item" href="/archives/">文章列表</a><a class="footer-item" href="/categories/">全部分类</a><a class="footer-item" href="/tags/">全部标签</a></div></div><div class="footer-group"><h3 class="footer-title">分类</h3><div class="footer-links"><a class="footer-item" href="/categories/JavaScript笔记/">JavaScript笔记</a><a class="footer-item" href="/categories/移动开发/">移动开发</a><a class="footer-item" href="/categories/学习笔记-CSS/">学习笔记-CSS</a></div></div><div class="footer-group"><h3 class="footer-title">生活</h3><div class="footer-links"><a class="footer-item" href="/essay/">随笔说说</a><a class="footer-item" href="/talking/">生活杂谈</a><a class="footer-item" href="学习笔记-HTML">学习笔记-HTML</a></div></div><div class="footer-group"><h3 class="footer-title">导航</h3><div class="footer-links"><a class="footer-item" href="/link/">友情链接</a><a class="footer-item" href="/tools/">在线工具</a><a class="footer-item" href="https://blog1.webxc.ml" rel="external nofollow noreferrer" target="_blank">Qexo管理</a></div></div><div class="footer-group"><h3 class="footer-title">协议</h3><div class="footer-links"><a class="footer-item" href="/privacy/">隐私协议</a><a class="footer-item" href="/copyright/">版权声明</a><a class="footer-item" href="/tousu/">侵权投诉</a></div></div></div><div id="footer-banner"><div class="footer-banner-links"><div class="footer-banner-left"><span class="copyright">&copy;2021 - 2023 By XC's Blog</span></div><div class="footer-banner-right"><a class="footer-banner-link" target="_blank" href="https://realwds.com" rel="external nofollow noreferrer">XC's Blog</a></div></div></div><script src="https://cdn1.tianli0.top/gh/briangonzalez/rgbaster.js@1.1.0/rgbaster.min.js"></script><script data-pjax="data-pjax" src="https://cdn1.tianli0.top/gh/web-xc/blog1/js/custom/realwds.js"></script><div class="js-pjax"><script>coverColor(),sayhi()</script></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-tip">搜搜看，说不定你就发现了我 🙊</div><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="https://cdn1.tianli0.top/gh/realwds/cdn/js/realwds-blog-utils.min.js"></script><script src="https://npm.elemecdn.com/hexo-theme-butterfly@3.7.1/source/js/main.js"></script><script defer src="https://npm.elemecdn.com/node-snackbar/dist/snackbar.min.js"></script><script defer src="https://npm.elemecdn.com/hexo-theme-butterfly@3.7.1/source/js/search/local-search.js"></script><div class="js-pjax"><script>(()=>{
+  const $countDom = document.getElementById('twikoo-count')
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://blog2.webxc.ml/',
+      region: ''
+    }, null))
+  }
+
+  const getCount = () => {
+    twikoo.getCommentsCount({
+      envId: 'https://blog2.webxc.ml/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      $countDom.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const loadTwikoo = (bool = false) => {
+    if (typeof twikoo === 'object') {
+      init()
+      bool && $countDom && setTimeout(getCount,0)
+    } else {
+      getScript('https://npm.elemecdn.com/twikoo/dist/twikoo.all.min.js').then(()=> {
+        init()
+        bool && $countDom && setTimeout(getCount,0)
+      })
+    }
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo(true)
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script data-pjax src="https://npm.elemecdn.com/pace-js@1.2.4/pace.min.js"></script><script src="https://npm.elemecdn.com/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/talking/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//npm.elemecdn.com/penndu@1.0.0/bsz.js"></script></div></body></html>

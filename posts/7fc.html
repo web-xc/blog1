@@ -1,0 +1,447 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>移动开发-响应式 | XC's Blog</title><meta name="keywords" content="移动开发"><meta name="author" content="XC's Blog"><meta name="copyright" content="XC's Blog"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="移动开发-响应式布局响应式开发原理: 使用媒体查询针对不同宽度的设备进行布局和样式设置，从而适配不同设备     设备划分 尺寸区间    超小屏幕 (手机) &lt; 768px   小屏设备 (平板) &gt;&#x3D; 768px ~ &lt; 992px   中等屏幕 (桌面显示器) &gt;&#x3D; 992px ~ &lt;1200px   宽屏设备 (大桌面显示器) &gt;&#x3D; 1200px   响">
+<meta property="og:type" content="article">
+<meta property="og:title" content="移动开发-响应式">
+<meta property="og:url" content="https://c.webxc.ml/posts/7fc.html">
+<meta property="og:site_name" content="XC&#39;s Blog">
+<meta property="og:description" content="移动开发-响应式布局响应式开发原理: 使用媒体查询针对不同宽度的设备进行布局和样式设置，从而适配不同设备     设备划分 尺寸区间    超小屏幕 (手机) &lt; 768px   小屏设备 (平板) &gt;&#x3D; 768px ~ &lt; 992px   中等屏幕 (桌面显示器) &gt;&#x3D; 992px ~ &lt;1200px   宽屏设备 (大桌面显示器) &gt;&#x3D; 1200px   响">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://npm.elemecdn.com/webxc@1.0.12/cover/cover17.jpg">
+<meta property="article:published_time" content="2022-11-17T13:32:00.000Z">
+<meta property="article:modified_time" content="2023-01-07T17:51:47.610Z">
+<meta property="article:author" content="XC&#39;s Blog">
+<meta property="article:tag" content="移动开发">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://npm.elemecdn.com/webxc@1.0.12/cover/cover17.jpg"><link rel="shortcut icon" href="https://npm.elemecdn.com/webxc@1.0.0/logo/logo.jpg"><link rel="canonical" href="https://c.webxc.ml/posts/7fc"><link rel="preconnect" href="//npm.elemecdn.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="https://cdn1.tianli0.top/gh/web-xc/blog1@c2a7976/css/index.css"><link rel="stylesheet" href="https://npm.elemecdn.com/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":500,"position":"top","messagePrev":"距离上次更新已经过了","messageNext":"天，文章所描述的内容可能已经发生变化，请留意。"},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":60,"languages":{"author":"作者: XC's Blog","link":"链接: ","source":"来源: XC's Blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"var(--wds-main)","bgDark":"var(--wds-main)","position":"bottom-center"},
+  source: {
+    jQuery: 'https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://npm.elemecdn.com/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://npm.elemecdn.com/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://npm.elemecdn.com/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://npm.elemecdn.com/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '移动开发-响应式',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-01-08 01:51:47'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><link rel="stylesheet" href="https://npm.elemecdn.com/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://cdn1.tianli0.top/gh/web-xc/blog1@c2a7976/css/custom/realwds.css"><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="XC's Blog" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://npm.elemecdn.com/webxc@1.0.0/logo/logo.jpg" onerror="onerror=null;src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">61</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">21</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">20</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 文库</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-book-open"></i><span> 文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-th-large"></i><span> 全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 娱乐</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/gif/"><i class="fa-fw fab fa-yelp"></i><span> 每日动图</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐鉴赏</span></a></li><li><a class="site-page child" href="/media/"><i class="fa-fw fas fa-film"></i><span> 视频解析</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 网站</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-user-friends"></i><span> 友情链接</span></a></li><li><a class="site-page child" href="/tools/"><i class="fa-fw fas fa-tools"></i><span> 在线工具</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 我的</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-user-circle"></i><span> 关于本站</span></a></li><li><a class="site-page child" href="/sponsor/"><i class="fa-fw fab fa-bitcoin"></i><span> 赞赏博主</span></a></li><li><a class="site-page child" href="/statistics/"><i class="fa-fw fas fa-chart-pie"></i><span> 博客统计</span></a></li><li><a class="site-page child" href="/essay/"><i class="fa-fw fab fa-twitch"></i><span> 随笔说说</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><div id="blog_name"><a id="site-name" href="/">XC's Blog</a></div><div id="page-name"><a id="page-name-text" onclick="btf.scrollToDest(0,500)">移动开发-响应式</a></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 文库</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-book-open"></i><span> 文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-th-large"></i><span> 全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 娱乐</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/gif/"><i class="fa-fw fab fa-yelp"></i><span> 每日动图</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐鉴赏</span></a></li><li><a class="site-page child" href="/media/"><i class="fa-fw fas fa-film"></i><span> 视频解析</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 网站</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-user-friends"></i><span> 友情链接</span></a></li><li><a class="site-page child" href="/tools/"><i class="fa-fw fas fa-tools"></i><span> 在线工具</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 我的</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-user-circle"></i><span> 关于本站</span></a></li><li><a class="site-page child" href="/sponsor/"><i class="fa-fw fab fa-bitcoin"></i><span> 赞赏博主</span></a></li><li><a class="site-page child" href="/statistics/"><i class="fa-fw fas fa-chart-pie"></i><span> 博客统计</span></a></li><li><a class="site-page child" href="/essay/"><i class="fa-fw fab fa-twitch"></i><span> 随笔说说</span></a></li></ul></div></div></div><div id="nav-right"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div id="darkmode_navswitch"><a class="site-page darkmode_switchbutton" onclick="navFn.switchDarkMode()"><i class="fas fa-adjust">     </i></a></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></div></nav><div class="coverdiv loaded" id="coverdiv"><img id="post-cover" src="https://npm.elemecdn.com/webxc@1.0.12/cover/cover17.jpg" alt="cover"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><span class="post-meta-categories"><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/">移动开发</a></span><span class="post-meta-date"><time datetime="2022-11-17T13:32:00.000Z" title="2022-11-17 21:32:00">2022-11-17</time></span></div></div><h1 class="post-title">移动开发-响应式</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-wordcount"><i class="fas fa-file-word fa-fw post-meta-icon"></i><span class="word-count">1.5k</span><i class="fas fa-stopwatch fa-fw post-meta-icon"></i><span>5分钟</span></span><span class="post-meta-pv-cv" id="" data-flag-title="移动开发-响应式"><i class="fab fa-hotjar fa-fw post-meta-icon"></i><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><div id="article-all"><article class="post-content" id="article-container"><h3 id="移动开发-响应式布局"><a href="#移动开发-响应式布局" class="headerlink" title="移动开发-响应式布局"></a>移动开发-响应式布局</h3><h3 id="响应式开发原理"><a href="#响应式开发原理" class="headerlink" title="响应式开发原理:"></a>响应式开发原理:</h3><ol>
+<li>使用媒体查询针对不同宽度的设备进行布局和样式设置，从而适配不同设备</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="left">设备划分</th>
+<th align="left">尺寸区间</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">超小屏幕 (手机)</td>
+<td align="left">&lt; 768px</td>
+</tr>
+<tr>
+<td align="left">小屏设备 (平板)</td>
+<td align="left">&gt;= 768px ~ &lt; 992px</td>
+</tr>
+<tr>
+<td align="left">中等屏幕 (桌面显示器)</td>
+<td align="left">&gt;= 992px ~ &lt;1200px</td>
+</tr>
+<tr>
+<td align="left">宽屏设备 (大桌面显示器)</td>
+<td align="left">&gt;= 1200px</td>
+</tr>
+</tbody></table>
+<h3 id="响应式布局容器"><a href="#响应式布局容器" class="headerlink" title="响应式布局容器:"></a>响应式布局容器:</h3><ol>
+<li>响应式需要一个父级做为布局容器，来配合子级元素来实现变化效果</li>
+<li>原理就是在不同屏幕下，通过媒体查询来改变这个布局容器的大小，再改变里面子元素的排列方式和大小，从而实现不同屏幕下，看到不同的页面布局和样式变化</li>
+<li>也可以根据实际情况自己定义划分</li>
+</ol>
+<h3 id="Bootstrap-简介"><a href="#Bootstrap-简介" class="headerlink" title="Bootstrap 简介:"></a>Bootstrap 简介:</h3><ol>
+<li>Bootstrap 来自Twitter，是目前最受欢迎的前端框架，Bootstrap是基于 HTML、CSS 和Javascript ，它简洁灵活，使得Web开发更快捷</li>
+<li>中文官网：<a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.bootcss.com/">http://www.bootcss.com/</a></li>
+<li>官网：<a target="_blank" rel="noopener external nofollow noreferrer" href="http://getbootstrap.com/">http://getbootstrap.com/</a> </li>
+<li>推荐使用：<a target="_blank" rel="noopener external nofollow noreferrer" href="http://bootstrap.css88.com/">http://bootstrap.css88.com/</a></li>
+<li>框架：顾名思义就是一套架构，它有一套比较完整的网页功能解决方案，而且控制权在框架本身，有预制样式库、组件和插件。使用者要按照框架所规定的某种规范进行开发</li>
+</ol>
+<h4 id="Bootstrap优点"><a href="#Bootstrap优点" class="headerlink" title="Bootstrap优点:"></a>Bootstrap优点:</h4><ol>
+<li>标准化的html+css编码规范</li>
+<li>提供了一套简洁、直观、强悍的组件</li>
+<li>有自己的生态圈，不断的更新迭代 </li>
+<li>让开发更简单，提高开发的效率</li>
+<li>2.3.2：停止维护,兼容性好,代码不够简洁，功能不够完善</li>
+<li>3.4.1：稳定, 但放弃了IE6-IE7，对IE8支持但是界面效果不好,偏向用于开发响应式布局、移动设备优先的Web项目</li>
+<li>4.6.1 ：最新版，目前还不是很流行 以上来自2020年的数据</li>
+</ol>
+<h4 id="Bootstrap-使用"><a href="#Bootstrap-使用" class="headerlink" title="Bootstrap 使用:"></a>Bootstrap 使用:</h4><ol>
+<li>控制权在框架本身，使用者要按照框架所规定的某种规范进行开发</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--要求当前网页使用IE浏览器最高版本的内核来渲染--&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--视口设置：视口宽度和设备一致，默认的缩放比例和PC端一致，用户不能自行缩放--&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1, user-scalable=0&quot;</span>&gt;</span></span><br><span class="line"> <span class="comment">&lt;!--[if lt IE 9]&gt;</span></span><br><span class="line"><span class="comment"> &lt;!--解决ie9以下浏览器对html5新增标签的不识别，并导致CSS不起作用的问题--&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"> <span class="comment">&lt;!--解决ie9以下浏览器对 css3 Media Query 的不识别 --&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://oss.maxcdn.com/respond/1.4.2/respond.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="布局容器"><a href="#布局容器" class="headerlink" title="布局容器:"></a>布局容器:</h3><ol>
+<li>Bootstrap 需要为页面内容和栅格系统包裹一个 .container 容器，它提供了两个作此用处的类</li>
+</ol>
+<h4 id="container-类"><a href="#container-类" class="headerlink" title="container 类:"></a>container 类:</h4><ol>
+<li>响应式布局的容器 固定宽度</li>
+<li> 大屏 ( &gt;=1200px) 宽度定为 1170px</li>
+<li>中屏 ( &gt;=992px)   宽度定为 970px</li>
+<li>小屏 ( &gt;=768px)   宽度定为 750px</li>
+<li>超小屏 (100%)</li>
+</ol>
+<h4 id="container-fluid-类"><a href="#container-fluid-类" class="headerlink" title="container-fluid 类:"></a>container-fluid 类:</h4><ol>
+<li>流式布局容器 百分百宽度</li>
+<li>占据全部视口 (viewport) 的容器</li>
+</ol>
+<hr>
+<h3 id="栅格系统介绍"><a href="#栅格系统介绍" class="headerlink" title="栅格系统介绍:"></a>栅格系统介绍:</h3><ol>
+<li>栅格系统英文为 Grid systems ,翻译为网格系统，是指将页面布局划分为等宽的列，然后通过列数的定义来模块化页面布局</li>
+<li>Bootstrap提供了一套响应式、移动设备优先的流式栅格系统，随着屏幕或视口 (viewport) 尺寸的增加，系统会自动分为最多12列</li>
+</ol>
+<h3 id="栅格选项参数"><a href="#栅格选项参数" class="headerlink" title="栅格选项参数:"></a>栅格选项参数:</h3><table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">超小屏幕 (手机)  &lt; 768px</th>
+<th align="left">小屏设备 (平板) &gt;=768px</th>
+<th align="left">中等屏幕 (桌面显示器) &gt;=992px</th>
+<th align="left">宽屏设备 (大桌面显示器) &gt;=1200px</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">.container 最大宽度</td>
+<td align="left">自动(100%)</td>
+<td align="left">750px</td>
+<td align="left">970px</td>
+<td align="left">1170px</td>
+</tr>
+<tr>
+<td align="left">类前缀</td>
+<td align="left">.col-xs-</td>
+<td align="left">.col-sm-</td>
+<td align="left">.col-md-</td>
+<td align="left">.col-lg</td>
+</tr>
+</tbody></table>
+<ol>
+<li>栅格系统用于通过一系列行与列的组合来创建页面布局，内容就可以放入这些创建好的布局中</li>
+<li>行 (row) 可以<strong>去除父容器的15px边距</strong> </li>
+<li>xs-extra small：超小； sm-small：小； md-medium：中等； lg-large：大； </li>
+<li>列 (column) 大于12，多余的列所在的元素将被整体另起一行排列</li>
+<li>每一列默认有<strong>左右15像素的 padding</strong></li>
+<li>可同时为一列指定多个设备的类名，以便划分不同份数 例如 class= col-md-4 col-sm-6</li>
+</ol>
+<hr>
+<h3 id="列嵌套"><a href="#列嵌套" class="headerlink" title="列嵌套:"></a>列嵌套:</h3><ol>
+<li>内置的栅格系统将内容再次嵌套，就是一个列内再分若干份小列，可以通过添加一个新的.row元素和一系列 .col-sm 元素到已经存在的 .col-sm 元素内</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-sm-4&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-sm-6&quot;</span>&gt;</span>列嵌套<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-sm-6&quot;</span>&gt;</span>列嵌套<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="列偏移"><a href="#列偏移" class="headerlink" title="列偏移:"></a>列偏移:</h3><ol>
+<li>使用 .col-md-offset  类可以将列向右侧偏移，这些类实际是通过使用 * 选择器为当前元素增加了左侧的边距 (margin)</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-lg-4&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-lg-4 col-lg-offset-4&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="列排序"><a href="#列排序" class="headerlink" title="列排序:"></a>列排序:</h3><ol>
+<li>通过使用 .col-md-push 和 .col-md-pull 类就可以改变列 (column) 的顺序</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-lg-4 col-lg-push-8&quot;</span>&gt;</span>左侧<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-lg-8 col-lg-pull-4&quot;</span>&gt;</span>右侧<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="响应式工具"><a href="#响应式工具" class="headerlink" title="响应式工具:"></a>响应式工具:</h3><table>
+<thead>
+<tr>
+<th align="left">类名</th>
+<th align="left">超小屏</th>
+<th align="left">小屏</th>
+<th align="left">中屏</th>
+<th align="left">大屏</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">.hidden-xs</td>
+<td align="left"><strong>隐藏</strong></td>
+<td align="left">可见</td>
+<td align="left">可见</td>
+<td align="left">可见</td>
+</tr>
+<tr>
+<td align="left">.hidden-sm</td>
+<td align="left">可见</td>
+<td align="left"><strong>隐藏</strong></td>
+<td align="left">可见</td>
+<td align="left">可见</td>
+</tr>
+<tr>
+<td align="left">.hidden-md</td>
+<td align="left">可见</td>
+<td align="left">可见</td>
+<td align="left"><strong>隐藏</strong></td>
+<td align="left">可见</td>
+</tr>
+<tr>
+<td align="left">.hidden-lg</td>
+<td align="left">可见</td>
+<td align="left">可见</td>
+<td align="left">可见</td>
+<td align="left"><strong>隐藏</strong></td>
+</tr>
+</tbody></table>
+<ol>
+<li>为了加快对移动设备友好的页面开发工作，利用媒体查询功能，并使用这些工具类可以方便的针对不同设备展示或隐藏页面内容</li>
+<li>Bootstrap 其他 (按钮、表单、表格) 可参考 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.bootcss.com/">Bootstrap 文档</a></li>
+</ol>
+<hr>
+<h4 id="本节单词："><a href="#本节单词：" class="headerlink" title="本节单词："></a>本节单词：</h4><ol>
+<li>Bootstrap</li>
+<li>container</li>
+<li>container-fluid</li>
+<li>viewport</li>
+<li>grid systems</li>
+<li>col</li>
+<li>lg md sm xs</li>
+<li>offset</li>
+<li>push</li>
+<li>pull</li>
+<li>visible</li>
+</ol>
+</article><div class="post-tools"><div class="post-tools-left"><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-hamburger"></i> 打赏作者</div><div class="reward-main"><ul class="reward-all"><ul class="reward-group"><li class="reward-item"><a href="https://npm.elemecdn.com/webxc@1.0.0/lxfs/wechat.png" rel="external nofollow noreferrer" target="_blank"><img class="post-qr-code-img" src="https://npm.elemecdn.com/webxc@1.0.0/lxfs/wechat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/webxc@1.0.0/lxfs/alipay.jpg" rel="external nofollow noreferrer" target="_blank"><img class="post-qr-code-img" src="https://npm.elemecdn.com/webxc@1.0.0/lxfs/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/sponsor/#特别鸣谢"><div class="reward-text">赞赏名单</div><div class="reward-dec">感谢给予支持的朋友，您的支持是我前进的动力。</div></a></ul></div></div><div class="post_share"><div class="social-share" data-image="https://npm.elemecdn.com/webxc@1.0.12/cover/cover17.jpg" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn1.tianli0.top/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://npm.elemecdn.com/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/">#移动开发</a></div></div></div></div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-info"><span>移动开发-响应式</span></span></div><div class="post-copyright__type"><span class="post-copyright-info"><a href="https://c.webxc.ml/posts/7fc.html">https://c.webxc.ml/posts/7fc.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-info">本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://c.webxc.ml" target="_blank">XC's Blog</a></span></div></div></div><div id="pagination-con"><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/1c7e.html"><img class="prev-cover" src="https://npm.elemecdn.com/webxc@1.0.12/cover/cover16.jpg" onerror="onerror=null;src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">移动开发-媒体查询</div></div></a></div><div class="next-post pull-right"><a href="/posts/f244.html"><img class="next-cover" src="https://cdn1.tianli0.top/gh/web-xc/iMG/postss/js1.jpg" onerror="onerror=null;src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">JavaScript 第一天</div></div></a></div></nav></div><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 猜你喜欢</span></div><div class="relatedPosts-list"><div class="post grid"><div class="grid-img"><a href="/posts/1c7e.html" title="移动开发-媒体查询"><img class="cover" src="https://npm.elemecdn.com/webxc@1.0.12/cover/cover16.jpg" alt="cover"></a></div><a class="grid-cat" href="/categories/移动开发/">移动开发</a><div class="grid-title"><a href="/posts/1c7e.html" title="移动开发-媒体查询">移动开发-媒体查询</a></div><div class="grid-meta"><span class="times"><i class="far fa-calendar-alt fa-fw"></i> 2022-11-14</span></div></div><div class="post grid"><div class="grid-img"><a href="/posts/2db5.html" title="移动开发-Flex布局"><img class="cover" src="https://npm.elemecdn.com/webxc@1.0.12/cover/cover15.jpg" alt="cover"></a></div><a class="grid-cat" href="/categories/移动开发/">移动开发</a><div class="grid-title"><a href="/posts/2db5.html" title="移动开发-Flex布局">移动开发-Flex布局</a></div><div class="grid-meta"><span class="times"><i class="far fa-calendar-alt fa-fw"></i> 2022-10-31</span></div></div><div class="post grid"><div class="grid-img"><a href="/posts/cf0e.html" title="移动开发-流式布局"><img class="cover" src="https://npm.elemecdn.com/webxc@1.0.12/cover/cover14.jpg" alt="cover"></a></div><a class="grid-cat" href="/categories/移动开发/">移动开发</a><div class="grid-title"><a href="/posts/cf0e.html" title="移动开发-流式布局">移动开发-流式布局</a></div><div class="grid-meta"><span class="times"><i class="far fa-calendar-alt fa-fw"></i> 2022-10-28</span></div></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar"><div class="author-info__sayhi" id="author-info__sayhi">👋 你好！我是</div><div class="author-info__name">XC's Blog</div><div class="author-info__description">我会在这里分享踩过的坑，干货笔记，以及生活中的感悟、吐槽、看法，与君共勉。</div><div class="author-info__description2">精致的五官是心动的开始，迷人的气质是动情的深渊。</div><a class="author-info__avatar" href="/about/"><img class="avatar-background" src="https://cdn1.tianli0.top/gh/realwds/cdn@master/person/awds-79k.png" onerror="this.onerror=null;this.src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="avatar"/></a></div><div class="card-info-social-icons"><a class="social-icon" href="https://c.webxc.ml/"><i class="fab fa-edge"></i></a><a class="social-icon" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/web-xc"><i class="fab fa-github"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content"><p>有问题评论留言，微信不解答问题，添加请注明来意。</p><div class="content_qrcode"><img src="https://npm.elemecdn.com/webxc@1.0.0/lxfs/wechat.jpg" alt="添加微信"></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91-%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80"><span class="toc-text">移动开发-响应式布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%93%8D%E5%BA%94%E5%BC%8F%E5%BC%80%E5%8F%91%E5%8E%9F%E7%90%86"><span class="toc-text">响应式开发原理:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80%E5%AE%B9%E5%99%A8"><span class="toc-text">响应式布局容器:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Bootstrap-%E7%AE%80%E4%BB%8B"><span class="toc-text">Bootstrap 简介:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Bootstrap%E4%BC%98%E7%82%B9"><span class="toc-text">Bootstrap优点:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Bootstrap-%E4%BD%BF%E7%94%A8"><span class="toc-text">Bootstrap 使用:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%83%E5%B1%80%E5%AE%B9%E5%99%A8"><span class="toc-text">布局容器:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#container-%E7%B1%BB"><span class="toc-text">container 类:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#container-fluid-%E7%B1%BB"><span class="toc-text">container-fluid 类:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%85%E6%A0%BC%E7%B3%BB%E7%BB%9F%E4%BB%8B%E7%BB%8D"><span class="toc-text">栅格系统介绍:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%85%E6%A0%BC%E9%80%89%E9%A1%B9%E5%8F%82%E6%95%B0"><span class="toc-text">栅格选项参数:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E5%B5%8C%E5%A5%97"><span class="toc-text">列嵌套:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E5%81%8F%E7%A7%BB"><span class="toc-text">列偏移:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E6%8E%92%E5%BA%8F"><span class="toc-text">列排序:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B7%A5%E5%85%B7"><span class="toc-text">响应式工具:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%AC%E8%8A%82%E5%8D%95%E8%AF%8D%EF%BC%9A"><span class="toc-text">本节单词：</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/7f86.html" title="JavaScript 第四天"><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/postss/js1.jpg" onerror="this.onerror=null;this.src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="JavaScript 第四天"/></a><div class="content"><a class="title" href="/posts/7f86.html" title="JavaScript 第四天">JavaScript 第四天</a><time datetime="2023-02-07T06:00:00.000Z" title="发表于 2023-02-07 14:00:00">2023-02-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/6e+47.html" title="JavaScript 第三天"><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/postss/js1.jpg" onerror="this.onerror=null;this.src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="JavaScript 第三天"/></a><div class="content"><a class="title" href="/posts/6e+47.html" title="JavaScript 第三天">JavaScript 第三天</a><time datetime="2022-12-27T15:30:00.000Z" title="发表于 2022-12-27 23:30:00">2022-12-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/623e.html" title="JavaScript 第二天"><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/postss/js1.jpg" onerror="this.onerror=null;this.src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="JavaScript 第二天"/></a><div class="content"><a class="title" href="/posts/623e.html" title="JavaScript 第二天">JavaScript 第二天</a><time datetime="2022-12-05T09:00:00.000Z" title="发表于 2022-12-05 17:00:00">2022-12-05</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-social"><a class="deal_link" href="https://github.com/web-xc" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="deal_link" href="https://gitlab.com/web-xc" rel="external nofollow noreferrer" target="_blank" title="GitLab"><i class="fab fa-gitlab"></i></a><a class="deal_link" href="https://gitee.com/web-xc" rel="external nofollow noreferrer" target="_blank" title="Gitee"><i class="fab fa-github-alt"></i></a><img class="footer_mini_logo" src="https://npm.elemecdn.com/webxc@1.0.0/logo/logo.jpg" onerror="this.onerror=null;this.src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="回到顶部" onclick="btf.scrollToDest(0,500)"/><a class="deal_link" href="tencent://message/?uin=2848141597&amp;Site=&amp;Menu=yes" rel="external nofollow noreferrer" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="deal_link" href="mailto:2848141597@qq.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="deal_link" href="/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss"></i></a></div><div id="footer-container"><div class="footer-group"><h3 class="footer-title">关于</h3><div class="footer-links"><a class="footer-item" href="/about/">关于本站</a><a class="footer-item" href="/sponsor/">赞赏博主</a><a class="footer-item" href="/statistics/">博客统计</a></div></div><div class="footer-group"><h3 class="footer-title">文章</h3><div class="footer-links"><a class="footer-item" href="/archives/">文章列表</a><a class="footer-item" href="/categories/">全部分类</a><a class="footer-item" href="/tags/">全部标签</a></div></div><div class="footer-group"><h3 class="footer-title">分类</h3><div class="footer-links"><a class="footer-item" href="/categories/JavaScript笔记/">JavaScript笔记</a><a class="footer-item" href="/categories/移动开发/">移动开发</a><a class="footer-item" href="/categories/学习笔记-CSS/">学习笔记-CSS</a></div></div><div class="footer-group"><h3 class="footer-title">生活</h3><div class="footer-links"><a class="footer-item" href="/essay/">随笔说说</a><a class="footer-item" href="/talking/">生活杂谈</a><a class="footer-item" href="学习笔记-HTML">学习笔记-HTML</a></div></div><div class="footer-group"><h3 class="footer-title">导航</h3><div class="footer-links"><a class="footer-item" href="/link/">友情链接</a><a class="footer-item" href="/tools/">在线工具</a><a class="footer-item" href="https://blog1.webxc.ml" rel="external nofollow noreferrer" target="_blank">Qexo管理</a></div></div><div class="footer-group"><h3 class="footer-title">协议</h3><div class="footer-links"><a class="footer-item" href="/privacy/">隐私协议</a><a class="footer-item" href="/copyright/">版权声明</a><a class="footer-item" href="/tousu/">侵权投诉</a></div></div></div><div id="footer-banner"><div class="footer-banner-links"><div class="footer-banner-left"><span class="copyright">&copy;2021 - 2023 By XC's Blog</span></div><div class="footer-banner-right"><a class="footer-banner-link" target="_blank" href="https://realwds.com" rel="external nofollow noreferrer">XC's Blog</a></div></div></div><script src="https://cdn1.tianli0.top/gh/briangonzalez/rgbaster.js@1.1.0/rgbaster.min.js"></script><script data-pjax="data-pjax" src="https://cdn1.tianli0.top/gh/web-xc/blog1/js/custom/realwds.js"></script><div class="js-pjax"><script>coverColor(),sayhi()</script></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-tip">搜搜看，说不定你就发现了我 🙊</div><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="https://cdn1.tianli0.top/gh/realwds/cdn/js/realwds-blog-utils.min.js"></script><script src="https://npm.elemecdn.com/hexo-theme-butterfly@3.7.1/source/js/main.js"></script><script defer src="https://npm.elemecdn.com/node-snackbar/dist/snackbar.min.js"></script><script defer src="https://npm.elemecdn.com/hexo-theme-butterfly@3.7.1/source/js/search/local-search.js"></script><div class="js-pjax"><script>(()=>{
+  const $countDom = document.getElementById('twikoo-count')
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://blog2.webxc.ml/',
+      region: ''
+    }, null))
+  }
+
+  const getCount = () => {
+    twikoo.getCommentsCount({
+      envId: 'https://blog2.webxc.ml/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      $countDom.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const loadTwikoo = (bool = false) => {
+    if (typeof twikoo === 'object') {
+      init()
+      bool && $countDom && setTimeout(getCount,0)
+    } else {
+      getScript('https://npm.elemecdn.com/twikoo/dist/twikoo.all.min.js').then(()=> {
+        init()
+        bool && $countDom && setTimeout(getCount,0)
+      })
+    }
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo(true)
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script data-pjax src="https://npm.elemecdn.com/pace-js@1.2.4/pace.min.js"></script><script src="https://npm.elemecdn.com/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/talking/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//npm.elemecdn.com/penndu@1.0.0/bsz.js"></script></div></body></html>

@@ -1,0 +1,695 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Vscode笔记-24款插件 | XC's Blog</title><meta name="keywords" content="Vscode"><meta name="author" content="XC's Blog"><meta name="copyright" content="XC's Blog"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="首先当然是一些语言支持的插件，这个大家根据自己的需要安装就好了。平时编写什么语言，就安装什么语言的插件。 这里简单列举一些语言。 C&#x2F;C++ 提供 C++ 语法识别、智能补全、代码跳转、调用依赖识别等，一般来说学生党安装这一个就可以了。还有一些其他的插件也非常不错，如 C++ Intellisense, C&#x2F;C++ Clang Command Adapter 等。 Java 提供代码调整、自动补全">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vscode笔记-24款插件">
+<meta property="og:url" content="https://c.webxc.ml/posts/1400581313.html">
+<meta property="og:site_name" content="XC&#39;s Blog">
+<meta property="og:description" content="首先当然是一些语言支持的插件，这个大家根据自己的需要安装就好了。平时编写什么语言，就安装什么语言的插件。 这里简单列举一些语言。 C&#x2F;C++ 提供 C++ 语法识别、智能补全、代码跳转、调用依赖识别等，一般来说学生党安装这一个就可以了。还有一些其他的插件也非常不错，如 C++ Intellisense, C&#x2F;C++ Clang Command Adapter 等。 Java 提供代码调整、自动补全">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://npm.elemecdn.com/webxc@1.0.0/cover/vscode1.jpg">
+<meta property="article:published_time" content="2021-08-01T00:00:00.000Z">
+<meta property="article:modified_time" content="2022-10-22T12:15:26.273Z">
+<meta property="article:author" content="XC&#39;s Blog">
+<meta property="article:tag" content="Vscode">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://npm.elemecdn.com/webxc@1.0.0/cover/vscode1.jpg"><link rel="shortcut icon" href="https://npm.elemecdn.com/webxc@1.0.0/logo/logo.jpg"><link rel="canonical" href="https://c.webxc.ml/posts/1400581313"><link rel="preconnect" href="//npm.elemecdn.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="https://cdn1.tianli0.top/gh/web-xc/blog1@c2a7976/css/index.css"><link rel="stylesheet" href="https://npm.elemecdn.com/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":500,"position":"top","messagePrev":"距离上次更新已经过了","messageNext":"天，文章所描述的内容可能已经发生变化，请留意。"},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":60,"languages":{"author":"作者: XC's Blog","link":"链接: ","source":"来源: XC's Blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"var(--wds-main)","bgDark":"var(--wds-main)","position":"bottom-center"},
+  source: {
+    jQuery: 'https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://npm.elemecdn.com/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://npm.elemecdn.com/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://npm.elemecdn.com/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://npm.elemecdn.com/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Vscode笔记-24款插件',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-10-22 20:15:26'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><link rel="stylesheet" href="https://npm.elemecdn.com/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://cdn1.tianli0.top/gh/web-xc/blog1@c2a7976/css/custom/realwds.css"><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="XC's Blog" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://npm.elemecdn.com/webxc@1.0.0/logo/logo.jpg" onerror="onerror=null;src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">61</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">21</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">20</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 文库</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-book-open"></i><span> 文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-th-large"></i><span> 全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 娱乐</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/gif/"><i class="fa-fw fab fa-yelp"></i><span> 每日动图</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐鉴赏</span></a></li><li><a class="site-page child" href="/media/"><i class="fa-fw fas fa-film"></i><span> 视频解析</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 网站</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-user-friends"></i><span> 友情链接</span></a></li><li><a class="site-page child" href="/tools/"><i class="fa-fw fas fa-tools"></i><span> 在线工具</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 我的</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-user-circle"></i><span> 关于本站</span></a></li><li><a class="site-page child" href="/sponsor/"><i class="fa-fw fab fa-bitcoin"></i><span> 赞赏博主</span></a></li><li><a class="site-page child" href="/statistics/"><i class="fa-fw fas fa-chart-pie"></i><span> 博客统计</span></a></li><li><a class="site-page child" href="/essay/"><i class="fa-fw fab fa-twitch"></i><span> 随笔说说</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><div id="blog_name"><a id="site-name" href="/">XC's Blog</a></div><div id="page-name"><a id="page-name-text" onclick="btf.scrollToDest(0,500)">Vscode笔记-24款插件</a></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 文库</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-book-open"></i><span> 文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-th-large"></i><span> 全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 娱乐</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/gif/"><i class="fa-fw fab fa-yelp"></i><span> 每日动图</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐鉴赏</span></a></li><li><a class="site-page child" href="/media/"><i class="fa-fw fas fa-film"></i><span> 视频解析</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 网站</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-user-friends"></i><span> 友情链接</span></a></li><li><a class="site-page child" href="/tools/"><i class="fa-fw fas fa-tools"></i><span> 在线工具</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 我的</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-user-circle"></i><span> 关于本站</span></a></li><li><a class="site-page child" href="/sponsor/"><i class="fa-fw fab fa-bitcoin"></i><span> 赞赏博主</span></a></li><li><a class="site-page child" href="/statistics/"><i class="fa-fw fas fa-chart-pie"></i><span> 博客统计</span></a></li><li><a class="site-page child" href="/essay/"><i class="fa-fw fab fa-twitch"></i><span> 随笔说说</span></a></li></ul></div></div></div><div id="nav-right"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div id="darkmode_navswitch"><a class="site-page darkmode_switchbutton" onclick="navFn.switchDarkMode()"><i class="fas fa-adjust">     </i></a></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></div></nav><div class="coverdiv loaded" id="coverdiv"><img id="post-cover" src="https://npm.elemecdn.com/webxc@1.0.0/cover/vscode1.jpg" alt="cover"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><span class="post-meta-categories"><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Vscode/">Vscode</a></span><span class="post-meta-date"><time datetime="2021-08-01T00:00:00.000Z" title="2021-08-01 08:00:00">2021-08-01</time></span></div></div><h1 class="post-title">Vscode笔记-24款插件</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-wordcount"><i class="fas fa-file-word fa-fw post-meta-icon"></i><span class="word-count">6.9k</span><i class="fas fa-stopwatch fa-fw post-meta-icon"></i><span>26分钟</span></span><span class="post-meta-pv-cv" id="" data-flag-title="Vscode笔记-24款插件"><i class="fab fa-hotjar fa-fw post-meta-icon"></i><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><div id="article-all"><article class="post-content" id="article-container"><p>首先当然是一些语言支持的插件，这个大家根据自己的需要安装就好了。平时编写什么语言，就安装什么语言的插件。</p>
+<p>这里简单列举一些语言。</p>
+<h3 id="C-C"><a href="#C-C" class="headerlink" title="C/C++"></a>C/C++</h3><p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/vscode1%20(23).webp"></p>
+<p>提供 C++ 语法识别、智能补全、代码跳转、调用依赖识别等，一般来说学生党安装这一个就可以了。还有一些其他的插件也非常不错，如 C++ Intellisense, C/C++ Clang Command Adapter 等。</p>
+<h3 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h3><p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/vscode1%20(22).webp"></p>
+<p>提供代码调整、自动补全、jdk 文档查询、Lint、类型检查、debug 等功能。</p>
+<p>因为 Java 的工程往往比较庞大，而 vscode 相对比较轻量级，相对来说不是非常合适。而且 Java 工程需要的插件也非常多，比如 Tomcat、spring、数据库等等……全部安装下来还是比较重的。所以还不如直接使用全部环境都集成好的 IDEA。</p>
+<h3 id="Go"><a href="#Go" class="headerlink" title="Go"></a>Go</h3><p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/vscode1%20(21).webp"></p>
+<p>vscode 对 go 语言的支持非常不错，在某些功能上甚至比 Jetbrains 家的 Goland 还要好用，比如 golint。</p>
+<p>和 Java 一样，golang 一般也是用来编写大型的后端项目，这类的项目代码文件非常多，感觉还是不太适合 vscode，这点还是仁者见仁。</p>
+<h3 id="Hive-SQL"><a href="#Hive-SQL" class="headerlink" title="Hive SQL"></a>Hive SQL</h3><p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/vscode1%20(20).webp"></p>
+<p>Hive SQL 语法支持，主要就用到高亮和补全，毕竟 hive sql 都不在本地运行。</p>
+<h3 id="HTML-CSS"><a href="#HTML-CSS" class="headerlink" title="HTML/CSS"></a>HTML/CSS</h3><p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/vscode1%20(19).webp"></p>
+<p>HTML/CSS 语法支持，前端党必备。</p>
+<h3 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a>Markdown</h3><p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/vscode1%20(18).webp"></p>
+<p>markdown 语法支持，可以在 vscode 当中编辑 markdown 文档，还支持图床的图片上传功能。</p>
+<p>由于很多 github 的 repo 都提供了 markdown 语法格式的 readme 文件，所以还是需要安装一下，这样才方便阅读。</p>
+<h3 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h3><p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/vscode1%20(17).webp"></p>
+<p>Python 的语法支持，支持 Python 的单测、lint、语法高亮、代码格式化、debug、jupyter 等功能。</p>
+<p>当中对 jupyter 的支持非常不错，可以在 vscode 当中快速打开、运行 .ipynb 文件，再也不用在 web 当中运行 notebook 了，体验大大提升。</p>
+<h2 id="各种神器"><a href="#各种神器" class="headerlink" title="各种神器"></a>各种神器</h2><p>上面介绍的都是语言支持型插件，大家根据自己平时编写的需要酌情安装即可。当然这里列举的也只是其中一部分。</p>
+<p>下面来介绍一下功能性的插件，可以实现一些各种各样的功能，有些是开发神器，有些是摸鱼神器，各有各的用处。</p>
+<h3 id="Auto-Close-Tag"><a href="#Auto-Close-Tag" class="headerlink" title="Auto Close Tag"></a>Auto Close Tag</h3><p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/vscode1%20(16).webp"></p>
+<p>前端神器，只需要编写左标签，例如<code>&lt;a&gt;,&lt;body&gt;,&lt;html&gt;</code>等，会自动替我们完成右侧标签的填充如：<code>&lt;/a&gt;, &lt;/body&gt;, &lt;/html&gt;</code>等。</p>
+<h3 id="Auto-Rename-Tag"><a href="#Auto-Rename-Tag" class="headerlink" title="Auto Rename Tag"></a>Auto Rename Tag</h3><p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/vscode1%20(15).webp"></p>
+<p>前端神器，自动修改标签名，当我们修改一个标签时，自动修改对应的右侧标签。</p>
+<h3 id="Better-Comments"><a href="#Better-Comments" class="headerlink" title="Better Comments"></a>Better Comments</h3><p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="图片"></p>
+<p>美化注释，可以将我们的多行注释按照类别自动高亮，如：</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/vscode1%20(14).webp"></p>
+<h3 id="Bracket-Pair-Colorizer"><a href="#Bracket-Pair-Colorizer" class="headerlink" title="Bracket Pair Colorizer"></a>Bracket Pair Colorizer</h3><p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/vscode1%20(13).webp"></p>
+<p>开发神器，当使用多层括号嵌套时，自动将不同层次的括号设置成不同的颜色，防止配对时眼瞎。</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/vscode1%20(12).webp"></p>
+<h2 id="CodeIf"><a href="#CodeIf" class="headerlink" title="CodeIf"></a>CodeIf</h2><p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="图片"></p>
+<p>变量起名神器，还在为起变量名发愁吗？使用它搜索一下，自动推荐合适的变量名，支持中文！</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/vscode1%20(11).webp"></p>
+<h3 id="Excel-Viewer"><a href="#Excel-Viewer" class="headerlink" title="Excel Viewer"></a>Excel Viewer</h3><p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/vscode1%20(10).webp"></p>
+<p>顾名思义，Excel 表格预览，数据分析党的神器，再也不用一个窗口看数据一个窗口写代码了。</p>
+<h3 id="ESLint"><a href="#ESLint" class="headerlink" title="ESLint"></a>ESLint</h3><p>前端神器，不解释。</p>
+<h3 id="Jslint"><a href="#Jslint" class="headerlink" title="Jslint"></a>Jslint</h3><p>JSLint，JavaScript lint 工具，前端党必备。</p>
+<h3 id="jupyter"><a href="#jupyter" class="headerlink" title="jupyter"></a>jupyter</h3><p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/vscode1%20(9).webp"></p>
+<p>vscode 中支持 jupyter，和 Python 插件对 jupyter 的支持类似。</p>
+<h3 id="leetcode"><a href="#leetcode" class="headerlink" title="leetcode"></a>leetcode</h3><p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/vscode1%20(8).webp"></p>
+<p>上班摸鱼、实验室摸鱼神器，再也不用担心刷题被老板看到了。</p>
+<h3 id="live-server"><a href="#live-server" class="headerlink" title="live server"></a>live server</h3><p>前端神器，可以在 vscode 中预览编写的网页。</p>
+<h3 id="Path-Intellisense"><a href="#Path-Intellisense" class="headerlink" title="Path Intellisense"></a>Path Intellisense</h3><p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/vscode1%20(7).webp" alt="图片"></p>
+<p>编码神器，相对路径自动补全</p>
+<h3 id="Remote-SSH"><a href="#Remote-SSH" class="headerlink" title="Remote - SSH"></a>Remote - SSH</h3><p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/vscode1%20(6).webp"></p>
+<p>开发神器，通过 vscode 以窗口的形式连接远程服务器，直接在 vscode 当中编写服务器代码！</p>
+<h3 id="Tabnine"><a href="#Tabnine" class="headerlink" title="Tabnine"></a>Tabnine</h3><p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/vscode1%20(5).webp"></p>
+<p>开发神器，超强大的代码自动补全。</p>
+<h3 id="Terminal-Here"><a href="#Terminal-Here" class="headerlink" title="Terminal Here"></a>Terminal Here</h3><p>开发神器，在当前窗口打开 terminal，再也不用每次开 terminal 都要不停地 cd 了。</p>
+<h3 id="vscode-icons"><a href="#vscode-icons" class="headerlink" title="vscode-icons"></a>vscode-icons</h3><p>给你的 vscode 中文件夹、文件换上更好看的图标。</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/vscode1%20(4).webp"></p>
+<h3 id="zhihu"><a href="#zhihu" class="headerlink" title="zhihu"></a>zhihu</h3><p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/vscode1%20(3).webp"></p>
+<p>摸鱼神器，年薪百万的秘密……</p>
+<h4 id="vscode当中好用的插件还有非常多，如果还知道什么其他神器的，可以在评论区留言。"><a href="#vscode当中好用的插件还有非常多，如果还知道什么其他神器的，可以在评论区留言。" class="headerlink" title="vscode当中好用的插件还有非常多，如果还知道什么其他神器的，可以在评论区留言。"></a>vscode当中好用的插件还有非常多，如果还知道什么其他神器的，可以在评论区留言。</h4><hr>
+<h2 id="【了解】GitHub-代码一键转-VS-Code，太好用了！"><a href="#【了解】GitHub-代码一键转-VS-Code，太好用了！" class="headerlink" title="【了解】GitHub 代码一键转 VS Code，太好用了！"></a>【了解】GitHub 代码一键转 VS Code，太好用了！</h2><p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/vscode1%20(1).webp"></p>
+<p>VS Code 是一个由微软开发，同时支持 Windows、 Linux 和 macOS 等操作系统的免费代码编辑器，它支持测试，并内置了 Git 版本控制功能，同时也具有开发环境功能，例如代码补全、代码片段和代码重构等。</p>
+<p>作为程序员常用的代码编辑器之一，VS Code 是一个可在所有平台上使用的开源、可扩展和轻量级的编辑器。这些品质使其大受欢迎，并成为 Python 开发的绝佳平台。</p>
+<p>那么，有没有可能提供 GitHub 链接，直接在 VS Code 上查看 Repo 代码呢？</p>
+<p>近日，GitHub 上出现了这样一个项目，可以使用户直接<strong>在 VS Code 界面读取 GitHub 项目的代码</strong>，实现了 GitHub 项目与 VS Code 的无缝衔接。</p>
+<p>这个项目名为 github1s，它的使用方法非常简单，<strong>只需要在浏览器地址栏 GitHub 网址链接中的「github 」后面添加 1s ，然后 Enter 键，即可在 VS Code 界面访问该项目的 Repo 代码</strong>。据项目主页显示，项目开发者来自百度。</p>
+<p>项目地址：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/conwnet/github1s">https://github.com/conwnet/github1s</a></p>
+<p>以 GitHub 项目「时间序列数据分析 Python 库 Deeptime」(<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/deeptime-ml/deeptime)%E4%B8%BA%E4%BE%8B%EF%BC%8C%E5%9C%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9C%B0%E5%9D%80%E6%A0%8F%E8%BE%93%E5%85%A5%E8%AF%A5%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%BD%91%E5%9D%80%EF%BC%8C%E5%9C%A8%E3%80%8Cgithub">https://github.com/deeptime-ml/deeptime)为例，在浏览器地址栏输入该项目的网址，在「github</a> 」后面添加「1s 」，如下图中红框所示：</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/vscode1%20(24).webp"></p>
+<p>然后回车键即可进入到 VS Code 界面，浏览该项目的相关内容。</p>
+<p>这就是加「1s」的神奇力量！</p>
+<p>用户需要准备以下先决条件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:conwnet/github1s.git</span><br><span class="line">$ cd github1s</span><br><span class="line">$ yarn</span><br><span class="line">$ yarn watch</span><br><span class="line">$ yarn serve # in another shell</span><br><span class="line">$ # Then visit http://localhost:5000 once the build is completed.</span><br><span class="line"></span><br><span class="line">并构建：</span><br><span class="line"></span><br><span class="line">$ yarn</span><br><span class="line">$ yarn build</span><br></pre></td></tr></table></figure>
+
+<hr>
+<blockquote>
+<p>Vscode笔记</p>
+</blockquote>
+<h3 id="通过在命令行输入-code-使-vscode-打开文件夹"><a href="#通过在命令行输入-code-使-vscode-打开文件夹" class="headerlink" title="通过在命令行输入 code . 使 vscode 打开文件夹"></a>通过在命令行输入 code . 使 vscode 打开文件夹</h3><p>Mac</p>
+<ul>
+<li>打开 <code>VS code</code></li>
+<li>打开命令面板（ <code>⇧⌘P</code> ）</li>
+<li>输入 <code>shell command</code></li>
+<li>找到: <code>Install &#39;code&#39; command in PATH</code></li>
+<li>点击一下就 OK 了。</li>
+</ul>
+<p>win（默认有 <code>code-insiders .</code> 新增 <code>code .</code>）</p>
+<ul>
+<li><p>把 <code>Code-insiders.exe</code> 复制一份重命名 <code>Code.exe</code></p>
+</li>
+<li><p>或者用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gitbash</span><br></pre></td></tr></table></figure>
+
+<p>配置别名</p>
+<ul>
+<li><code>echo &#39;alias code=&quot;code-insiders&quot;&#39; &gt;&gt; vim ~/.bashrc</code></li>
+<li><code>echo &#39;alias web=&quot;webstorm64&quot;&#39; &gt;&gt; vim ~/.bashrc</code></li>
+<li><code>source ~/.bashrc</code>使别名立即生效</li>
+<li><code>code .</code>使用<code>vscode</code>打开当前文件夹</li>
+</ul>
+</li>
+</ul>
+<h3 id="终端切换"><a href="#终端切换" class="headerlink" title="终端切换"></a>终端切换</h3><blockquote>
+<p>左下角设置——&gt;功能——&gt;终端——&gt;External:Windows Exec<br>配置好之后，打开终端，点击选择默认shell，选中后重新打开终端</p>
+</blockquote>
+<ul>
+<li>cmd<code>C:\Windows\System32\cmd.exe</code></li>
+<li>gitbash<code>D:\Git\git-bash.exe</code></li>
+</ul>
+<h3 id="调试技巧"><a href="#调试技巧" class="headerlink" title="调试技巧"></a>调试技巧</h3><p>VSCode Debug功能按钮从左到右功能依次为：</p>
+<ul>
+<li>按钮1：运行/继续 F5，直接跳转到下一断点；</li>
+<li>按钮2：单步跳过(又叫逐过程) F10，按语句单步执行。当有函数时，不会进入函数；</li>
+<li>按钮3：单步调试（又叫逐语句） F11：当有函数时，点击这个按钮，会进入这个函数内；</li>
+<li>按钮4：单步跳出 ⇧F11:如果有循环，点击该按钮，会执行到循环外面的语句；</li>
+<li>按钮5：重启 ⇧⌘F5；</li>
+<li>按钮6：停止 ⇧F5</li>
+</ul>
+<p>VSCode launch.json常用变量</p>
+<ul>
+<li>${workspaceRoot}：VS Code当前打开的文件夹</li>
+<li>${file} ：当前打开的文件</li>
+<li>${relativeFile}：相对于workspaceRoot的相对路径</li>
+<li>${fileBasenameNoExtension}：当前文件的文件名，不带后缀，也即launch</li>
+<li>${fileBasename}： 当前打开文件的文件名</li>
+<li>${fileDirname}： 所在的文件夹，是绝对路径</li>
+<li>${fileDirname}：文件所在的文件夹路径</li>
+<li>${lineNumber}：当前文件光标所在的行号</li>
+<li>${fileExtname}：当前打开文件的拓展名，如.json</li>
+<li>${cwd}： 启动时任务运行程序的当前工作目录</li>
+<li>${workspaceFolder}：表示当前workspace文件夹路径</li>
+<li>${workspaceRootFolderName}：表示workspace的文件夹名</li>
+<li>${env:PATH}：系统中的环境变量</li>
+</ul>
+<p>VSCode调试配置项说明</p>
+<blockquote>
+<p>request：请求配置类型，可以为launch（启动）或attach（附加）</p>
+</blockquote>
+<ul>
+<li><p>下面是launch 和 attach 类型共有的属性</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">MD</span><br><span class="line">protocol：设置调试协议</span><br><span class="line">auto： 尝试自动检测目标运行时使用的协议</span><br><span class="line">inspector 新的V8调试器协议，解决遗留版本的多数问题，node versions &gt;= 6.3 and Electron versions &gt;= 1.7.4</span><br><span class="line">legacy： 原始的v8调试器协议，node versions &lt; v8.0 and Electron versions &lt; 1.7.4.</span><br><span class="line">port：调试使用的端口</span><br><span class="line">address ：TCP/IP地址，用于远程调试</span><br><span class="line">localRoot： 远程调试时映射的本地地址</span><br><span class="line">remoteRoot： 远程调试时的远程目录地址</span><br><span class="line">sourceMaps： 默认为true</span><br><span class="line">outFiles ：当map文件不在js文件同目录时用于指定 sourceMaps的位置</span><br><span class="line">restart ：自动重启调试</span><br><span class="line">timeout： 配置自动附加的超时时间</span><br><span class="line">stopOnEntry： 自动断点到第一行代码处</span><br><span class="line">smartStep： 自动跳过未映射到源代码的代码</span><br><span class="line">skipFiles :[]String,指定跳过单步调试的代码</span><br><span class="line">trace ： 启用诊断输出</span><br></pre></td></tr></table></figure></li>
+<li><p>以下是特定于类型 launch(启动)的配置属性</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">MD</span><br><span class="line">program： 指定调试入口文件地址</span><br><span class="line">args ： []String 传递给程序的参数,可在process.argv拿到</span><br><span class="line">cwd ：指定程序启动调试的目录 ,当vscode启动目录不是项目根目录，并且调试npm script时非常有用</span><br><span class="line">runtimeExecutable： 设置运行时可执行文件路径，默认是node</span><br><span class="line">可以是其他的执行程序，如npm、nodemon</span><br><span class="line">runtimeArgs： 传递给运行时可执行文件的参数,例如：</span><br><span class="line">runtimeVersion： 设置运行时可执行程序的版本，如果使用nvm，可以切换node.js版本</span><br><span class="line">env： 添加额外的环境变量</span><br><span class="line">envFile： 文件加载环境变量</span><br><span class="line">console： 配置终端可以是外部终端或者内部集成终端，默认值internalConsole</span><br><span class="line">autoAttachChildProcesses： 跟踪调试对象的所有子过程，并自动附加到在调试模式下启动的子过程</span><br></pre></td></tr></table></figure>
+
+<p>调试内容来源</p>
+</li>
+</ul>
+<h3 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h3><ul>
+<li><code>Settings Sync</code> 只需要通过<code>GistID:fc1481c83fb01baf1b818b817bec4e7a</code>就可以同步更新已有的配置和扩展</li>
+<li><code>.gitignore Generator</code> 自动生成<code>.gitignore</code>文件</li>
+<li><code>Auto Rename Tag</code> 修改双标签如：div，会自动同步修改对应的闭合标签（开始标签、结尾标签）</li>
+<li><code>Babel JavaScript</code> ES201x，React JSX，Flow和GraphQL的JavaScript语法突出显示。</li>
+<li><code>Bash Debug</code> 一个基于超赞bashdb脚本的bash调试器GUI前端（bashdb现在包含在软件包中）。</li>
+<li><code>Better Comments</code> 更好的注释扩展，将帮助您在代码中创建更人性化的注释。</li>
+<li><code>Bracket Pair Colorizer</code> 给括号上色的，如：((()))，闭合括号会有相同颜色，相邻括号颜色会有明显区分</li>
+<li><code>Chinese (Simplified)</code> 简体中文扩展</li>
+<li><code>Code Runner</code> 代码运行器，代码片段运行器。在单独<code>JS</code>文件上右键<code>run code</code>或<code>Ctrl+Alt+N</code>或<code>F1</code>-&gt;点击<code>run code</code></li>
+<li><code>Community Material Theme</code> 主题，<code>ctrl+shift+p</code>—&gt;<code>color theme</code>—&gt;输入<code>Community</code>按上下选择主题</li>
+<li><code>Darcula Theme - WebStorm Edition</code> 主题，<code>ctrl+shift+p</code>—&gt;<code>color theme</code>—&gt;输入<code>WebStorm</code>选择主题</li>
+<li><code>Dart</code> Dart Code通过支持 Dart编程语言扩展了VS Code，并提供了有效编辑，重构，运行和重新加载Flutter 移动应用程序和AngularDart Web应用程序的工具。</li>
+<li><code>Debugger for Chrome</code> Chrome调试</li>
+<li><code>Docker</code> Docker扩展使从Visual Studio Code轻松构建，管理和部署容器化应用程序变得容易。它还提供了在容器内对Node.js，Python和.NET Core的一键式调试。</li>
+<li><code>EJS language support</code> EJS语言支持。注意：如果看不到任何样式，请将“ * .ejs”的文件关联设置为html</li>
+<li><code>Auto Import</code> 对<code>import</code>自动导入（注意检查代码，有时候自动导入了乱七八糟的东西导致报错，需要手动删除）</li>
+<li><code>ESLint</code> 将<code>ESLint</code>集成到<code>VS Code</code>中。</li>
+<li><code>Flutter</code> 此VS Code扩展增加了对有效编辑，重构，运行和重新加载Flutter 移动应用程序的支持，以及对Dart编程语言的支持。</li>
+<li><code>Flutter Helpers</code> <code>Flutter</code>代码提示</li>
+<li><code>Flutter Widget Snippets</code> <code>Flutter</code>代码片段</li>
+<li><code>Formatting Toggle</code> 可以通过单击来打开和关闭格式化程序（漂亮，漂亮，…）。</li>
+<li><code>GitLens — Git supercharged</code> 内置到Visual Studio代码Git的能力。它可以帮助您通过Git责任注释和代码镜头一目了然地看到代码作者的身份，无缝地导航和浏览Git存储库，通过强大的比较命令获得有价值的见解，等等。</li>
+<li><code>Gradle Language Support</code> 字面意思，<code>Gradle</code>语言支持</li>
+<li><code>HTML CSS Support</code> 字面意思，<code>html css</code>语言支持（支持==提示）</li>
+<li><code>Ignore files</code> <code>.gitignore</code>引用<code>gitignore</code>和忽略文件，还支持：<code>.npmignore</code>、<code>.dockerignore</code>、<code>.coffeelintignore</code>、<code>.slugignore</code>、<code>.atomignore</code>、<code>.hgignore</code>、<code>.vscodeignore</code>、<code>.eslintignore</code>、<code>.prettierignore</code>、<code>.stylelintignore</code></li>
+<li><code>Import Cost</code> 计算<code>imports</code>、<code>requires</code>的包大小</li>
+<li><code>IntelliSense for CSS class names in HTML</code> 标签的<code>class</code>里面自动提示<code>classname</code></li>
+<li><code>JavaScript (ES6) code snippets</code> <code>ES6</code>代码提示</li>
+<li><code>JavaScript Booster</code> 当在<code>JavaScript</code>（或<code>TypeScript</code>/<code>Flow</code>）中编辑代码时，此<code>VS Code</code>扩展提供了各种代码操作（快速修复）。只需注意左侧的灯泡，然后按一下它即可了解如何在光标下转换代码。</li>
+<li><code>json2ts</code> 可将JSON转换为<code>TypeScript</code>接口。您可以从<code>VS Code</code>中浏览和安装扩展。<code>Ctrl+P</code>通过键入来按并缩小列表命令的范围<code>ext install json2ts</code>。</li>
+<li><code>LeetCode</code> <code>vscode</code>支持<code>LeetCode</code>做题、搜题</li>
+<li><code>licenser</code> 快速创建许可文件，或插入许可注释，支持多语言</li>
+<li><code>Live Server</code> 字面意思，实时服务器</li>
+<li><code>Live Share</code> 实时分享，<code>Microsoft Visual Studio</code>实时共享</li>
+<li><code>Markdown All in One</code> <code>Markdown</code>对<code>Visual Studio Code</code>的支持，<code>Markdown</code>所需的全部功能（键盘快捷键，目录，自动预览等）。</li>
+<li><code>Material Icon Theme</code> 文件图标、文件夹图标、自定义文件夹颜色、文件夹主题、自定义图标的不透明度、自定义图标饱和度、自定义图标关联、文件关联、自定义SVG图标、文件夹关联、自定义SVG文件夹图标、语言协会</li>
+<li><code>Material Theme</code> <code>vscode</code>主题</li>
+<li><code>Move TS - Move TypeScript files and update relative imports</code> 移动包含<code>TypeScript</code>的<code>TypeScript</code>文件和文件夹，并更新其相对导入路径。</li>
+<li><code>neuron</code> <code>Visual Studio Code</code>的神经元，面向数据科学家的交互式编程体验</li>
+<li><code>Node.js Exec</code> 使用<code>node.js</code>执行当前文件或您选择的代码。</li>
+<li><code>Node.js Modules Intellisense</code> <code>Visual Studio Code</code>插件，可以自动完成导入语句中的<code>JavaScript</code> / <code>TypeScript</code>模块。</li>
+<li><code>npm Intellisense</code> <code>Visual Studio Code</code>插件，可自动完成导入语句中的<code>npm</code>模块。</li>
+<li><code>Output Colorizer</code> <code>VSCode</code>日志输出着色器</li>
+<li><code>Path Intellisense</code> 路径智能感知</li>
+<li><code>Live Sass Compiler</code> <code>vscode</code>自动编译<code>scss</code>文件为<code>css</code>文件</li>
+<li><code>Prettier - Code formatter</code> 更漂亮-代码格式化程序</li>
+<li><code>Remote - SSH</code> <code>Visual Studio</code>代码远程-<code>SSH</code></li>
+<li><code>Remote - SSH: Editing Configuration Files</code> <code>Visual Studio Code</code>远程-<code>SSH</code>：编辑配置文件</li>
+<li><code>SCSS Everywhere</code> <code>HTML</code>、<code>Svelte</code>、<code>Latte</code>、<code>Slim</code>、<code>Liquid</code>、<code>TSX/JSX</code>、<code>Haml</code>、<code>Elixir</code>、<code>Smarty</code>、<code>PHP</code>、<code>ERB</code>、<code>Javascript</code>、<code>CSS</code>和<code>SCSS</code>的<code>&#39;.class&#39;</code>和<code>&#39;#id&#39;</code>完成。只需在模板或<code>CSS/SCSS</code>中声明类，然后在任何地方都可以看到它。（两个方向）</li>
+<li><code>SCSS Formatter</code> <code>SCSS</code>格式化程序</li>
+<li><code>SCSS IntelliSense</code> <code>SCSS</code>智能感知</li>
+<li><code>shell-format</code> <code>shell</code>格式化</li>
+<li><code>Swig(.tpl)</code> <code>Swig</code>的简单语法着色和漂亮的代码片段。现在支持<code>.tpl</code>扩展名。</li>
+<li><code>TypeScript Hero</code> <code>TypeScript Hero</code>是一个<code>vscode</code>扩展，使您的生活更轻松。在编写大量代码时，<code>TypeScript</code>您可能需要<code>vscode</code>来组织导入。</li>
+<li><code>TSLint</code> <code>eslit</code>是<code>JS/ES</code>的，<code>TSLint</code>则是相对于<code>TS</code>的</li>
+<li><code>Turbo Console Log</code> 通过自动执行写有意义的日志消息的操作，此扩展使调试变得更加容易。</li>
+<li><code>TypeScript Importer</code> 在工作空间文件中自动搜索<code>TypeScript</code>定义，并提供所有已知符号作为完成项以允许代码完成。</li>
+<li><code>TypeScript Toolbox</code> 优化/自动导入，生成吸气剂/设置器和构造函数</li>
+<li><code>Vetur</code> 对<code>vue</code>友好支持，代码提示，高亮，格式化，整理/错误检查，智能感知，调试等。</li>
+<li><code>Visual Studio IntelliCode</code> 为<code>Python</code>，<code>TypeScript/JavaScript</code>和<code>Java</code>开发<code>AI</code>辅助开发功能在<code>Visual Studio Code</code>，基于理解你的代码的上下文与机器学习相结合的见解。</li>
+<li><code>Vue Peek</code> 支持<code>Vue</code>快捷编辑，很方便</li>
+<li><code>Vue.js Extension Pack</code> <code>Vue.js</code>扩展包，该扩展包为<code>Vue.js</code>开发添加了功能。</li>
+<li><code>Vue VSCode Snippets</code> <code>Vue</code>代码提示</li>
+<li><code>VueHelper</code> 支持<code>Vue</code>快捷编辑，很方便</li>
+<li><code>YAML</code> 红帽的<code>YAML</code>语言支持</li>
+<li><code>picgo</code> 图床，支持<code>markdown</code>粘贴图片自动上传并生成链接</li>
+<li><code>Browser Preview</code>,在<code>vscode</code>中实现预览调试</li>
+</ul>
+<h4 id="Settings-Sync-上传和拉取"><a href="#Settings-Sync-上传和拉取" class="headerlink" title="Settings Sync 上传和拉取"></a>Settings Sync 上传和拉取</h4><p>vscode 可以快速完成配置，自动安装相关扩展</p>
+<ul>
+<li><p>搜索扩展并安装<code>Settings Sync</code></p>
+</li>
+<li><p>拉取公共配置文件和扩展</p>
+<ul>
+<li>安装好后会自动弹出 Setting Sync（或者 <code>ctrl+shift+p</code> 输入<code>sync</code>，找到<code>sync:advanced options</code>，然后点击—&gt;再点击打开设置）</li>
+<li><strong>第一次使用未配置过</strong></li>
+<li>点击<code>LOGIN WITH GITHUB</code>下面的<code>Download Public Gist</code>，粘贴你的 <code>gist</code> <code>fc1481c83fb01baf1b818b817bec4e7a</code>，回车即可</li>
+<li><strong>如果已配置（或修改gist）</strong></li>
+<li>在<code>Environment Settings</code>下面的<code>Gist ID</code>处修改ID，然后<code>ctrl+shift+p</code> 输入 <code>sync</code>，点击<code>sync:download setting</code></li>
+</ul>
+</li>
+<li><p>上传配置文件和扩展</p>
+<ul>
+<li><p>生成</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">token</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>点击<code>EDIT CONFIGURATION</code>，然后去生成 <code>github token</code></li>
+<li>登录 <code>github</code> 并打开 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/settings/tokens">https://github.com/settings/tokens</a></li>
+<li>点击 <code>Generate new token</code></li>
+<li>输入账号密码</li>
+<li>输入 Note</li>
+<li>选择<code>[*] gist Create gists</code></li>
+<li>点击<code>Generate token</code></li>
+</ul>
+</li>
+<li><p>配置</p>
+<ul>
+<li>安装好后会自动弹出 <code>Setting Sync</code>（或者 <code>ctrl+shift+p</code> 输入 sync，找到<code>sync:advanced options</code>，然后点击—&gt;再点击打开设置）</li>
+<li><strong>第一次使用未配置过</strong>需要点击<code>EDIT CONFIGURATION</code></li>
+<li><strong>如果你的 github 账号上传过，可以把老的<code>Gist ID</code>粘贴在<code>Environment Settings</code>处</strong></li>
+<li>将生成成功的<code>token</code>粘贴至<code>Global Settings</code>的<code>获取令牌</code>，失焦自动保存</li>
+<li>如果没有自动上传生成<code>Gist ID</code>，手动<code>shift+alt+u</code>上传下</li>
+<li><code>Environment Settings</code>下面的选项全部勾了，当前设备会自动强制更新同步为<code>Gist ID</code>的最新配置扩展</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>配置和使用</p>
+<ul>
+<li>命令面板(<code>ctrl+shift+p</code>)—&gt;输入 <code>sync</code> 即可查看相关设置</li>
+<li>上传配置<code>shift+alt+u</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="ESlint-使用"><a href="#ESlint-使用" class="headerlink" title="ESlint 使用"></a>ESlint 使用</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint">vscode-eslint</a></p>
+<ul>
+<li><p>搜索安装或打开<code>vscode-eslint</code>点击安装</p>
+</li>
+<li><p>配置保存自动修复</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">JS</span><br><span class="line">// 下面的设置为包括ESLint在内的所有提供程序打开“自动修复”：</span><br><span class="line">&quot;editor.codeActionsOnSave&quot;: &#123;</span><br><span class="line">    &quot;source.fixAll&quot;: true</span><br><span class="line">&#125;</span><br><span class="line">// 相反，此配置仅在ESLint上将其打开：</span><br><span class="line">&quot;editor.codeActionsOnSave&quot;: &#123;</span><br><span class="line">    &quot;source.fixAll.eslint&quot;: true</span><br><span class="line">&#125;</span><br><span class="line">// 您还可以通过以下方式有选择地禁用ESLint：</span><br><span class="line">&quot;editor.codeActionsOnSave&quot;: &#123; // 除过 eslint 的项目都修复</span><br><span class="line">    &quot;source.fixAll&quot;: true,</span><br><span class="line">    &quot;source.fixAll.eslint&quot;: false</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>项目安装<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.npmjs.com/package/eslint">npm安装eslint</a></p>
+</li>
+<li><p>初始化配置文件<code>npm install eslint --save-dev</code> &amp;&amp; <code>npx eslint --init</code></p>
+</li>
+<li><p>打开进行配置：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://eslint.org/docs/rules/">eslint官网doc</a></p>
+</li>
+<li><p>配置完之后通过此命令校验<code>js</code>文件：<code>npx eslint src/**/*.js</code></p>
+</li>
+<li><p>配置参考如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.eslintrc</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">JS</span><br><span class="line">// 展示样式的规则 https://eslint.org/docs/rules/#stylistic-issues</span><br><span class="line">&#123;</span><br><span class="line">  &quot;env&quot;: &#123;</span><br><span class="line">      // 指定环境、指定全局、指定解析器选项、文档 https://eslint.org/docs/user-guide/configuring/language-options#specifying-environments</span><br><span class="line">      &quot;browser&quot;: false, // 浏览器全局变量不需要支持</span><br><span class="line">      // var process: NodeJS.Process &#x27;process&#x27; is not defined.</span><br><span class="line">      // var process: NodeJS.Process &#x27;process&#x27; is not defined.</span><br><span class="line">      &quot;node&quot;: true, // Node.js全局变量和Node.js作用域。</span><br><span class="line">      // 添加所有ECMAScript 2021全局变量并将ecmaVersion解析器选项自动设置为12。</span><br><span class="line">      // es6 的解析器为 6</span><br><span class="line">      &quot;es2021&quot;: true</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;extends&quot;: &quot;eslint:recommended&quot;,</span><br><span class="line">  &quot;parserOptions&quot;: &#123;</span><br><span class="line">      &quot;ecmaVersion&quot;: 12,</span><br><span class="line">      // 报错：Parsing error: &#x27;import&#x27; and &#x27;export&#x27; may appear only with &#x27;sourceType: module&#x27;eslint</span><br><span class="line">      &quot;sourceType&quot;: &quot;module&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;rules&quot;: &#123;</span><br><span class="line">    &quot;semi&quot;: [&quot;error&quot;, &quot;never&quot;], // 结尾是否需要分号，never不要，always要 https://eslint.org/docs/rules/semi#require-or-disallow-semicolons-instead-of-asi-semi</span><br><span class="line">    &quot;quotes&quot;: [&quot;error&quot;, &quot;double&quot;,&#123; &quot;allowTemplateLiterals&quot;: true &#125;], // double 双引号 single 单引号 allowTemplateLiterals 支持es6`` https://eslint.org/docs/rules/quotes</span><br><span class="line">    &quot;no-multi-spaces&quot;: &quot;error&quot;, // 禁止多个空格 https://eslint.org/docs/rules/no-multi-spaces#disallow-multiple-spaces-no-multi-spaces</span><br><span class="line">    // 以下打开搜索名称即可 https://eslint.org/docs/rules/#stylistic-issues</span><br><span class="line">    &quot;block-spacing&quot;: &quot;error&quot;,</span><br><span class="line">    &quot;comma-spacing&quot;: [&quot;error&quot;, &#123; &quot;before&quot;: false, &quot;after&quot;: true &#125;],</span><br><span class="line">    &quot;space-unary-ops&quot;: &quot;error&quot;,</span><br><span class="line">    &quot;space-before-blocks&quot;: [&quot;error&quot;, &#123; &quot;functions&quot;: &quot;never&quot;, &quot;keywords&quot;: &quot;never&quot;, &quot;classes&quot;: &quot;never&quot; &#125;],</span><br><span class="line">    &quot;space-before-function-paren&quot;: [&quot;error&quot;, &quot;never&quot;],</span><br><span class="line">    &quot;space-in-parens&quot;: [&quot;error&quot;, &quot;always&quot;, &#123; &quot;exceptions&quot;: [&quot;[]&quot;] &#125;],</span><br><span class="line">    &quot;no-multiple-empty-lines&quot;: [&quot;error&quot;, &#123; &quot;max&quot;:1, &quot;maxBOF&quot;: 0&#125;],</span><br><span class="line">    &quot;lines-around-comment&quot;: [&quot;error&quot;, &#123; &quot;beforeBlockComment&quot;: true, &quot;allowClassStart&quot;: true &#125;],</span><br><span class="line">    &quot;indent&quot;: [&quot;error&quot;, 2],</span><br><span class="line">    &quot;arrow-body-style&quot;:  [&quot;error&quot;, &quot;as-needed&quot;],</span><br><span class="line">    &quot;arrow-spacing&quot;: [&quot;error&quot;, &#123; &quot;before&quot;: false, &quot;after&quot;: false &#125;],</span><br><span class="line">    &quot;arrow-parens&quot;: [&quot;error&quot;, &quot;always&quot;],</span><br><span class="line">    &quot;no-confusing-arrow&quot;: &quot;error&quot;,</span><br><span class="line">    &quot;yield-star-spacing&quot;: [&quot;error&quot;, &quot;after&quot;],</span><br><span class="line">    &quot;rest-spread-spacing&quot;: [&quot;error&quot;, &quot;never&quot;]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">// 可以参考这里的配置 https://www.cnblogs.com/520future/p/11038793.html</span><br></pre></td></tr></table></figure>
+
+<h4 id="ESlint-Prettier"><a href="#ESlint-Prettier" class="headerlink" title="ESlint+Prettier"></a>ESlint+Prettier</h4><p>1、VScode搜索并安装这两个插件：ESlint Prettier</p>
+</li>
+<li><p>安装完成之后，按下<code>ctrl+shit+p</code>，输入setting.json，选择<code>首选项：打开设置（json）</code>回车</p>
+</li>
+<li><p>在设置中插入如下配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">JS</span><br><span class="line">// eslint配置项，保存时自动修复</span><br><span class="line">&quot;editor.codeActionsOnSave&quot;: &#123;</span><br><span class="line">    &quot;source.fixAll.eslint&quot;: true</span><br><span class="line">&#125;,</span><br><span class="line">// 默认使用prettier格式化支持的文件</span><br><span class="line">&quot;editor.defaultFormatter&quot;: &quot;esbenp.prettier-vscode&quot;,</span><br><span class="line">// 自动设定eslint工作区</span><br><span class="line">&quot;eslint.workingDirectories&quot;: [</span><br><span class="line">    &#123; &quot;mode&quot;: &quot;auto&quot; &#125;</span><br><span class="line">],</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>2、为你的项目安装以下插件</p>
+<ul>
+<li><code>yarn add eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin prettier eslint-config-prettier eslint-plugin-prettier --dev</code><br>or</li>
+<li><code>npm install eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin prettier eslint-config-prettier eslint-plugin-prettier --save-dev</code></li>
+</ul>
+<p>3、新建eslint配置文件</p>
+<ul>
+<li><p>在项目根目录下新建<code>.eslintrc.js</code>文件</p>
+</li>
+<li><p>写入如下内容</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">JS</span><br><span class="line">module.exports = &#123;</span><br><span class="line">  parser: &quot;@typescript-eslint/parser&quot;, // 指定ESLint解析器</span><br><span class="line">  parserOptions: &#123;</span><br><span class="line">    sourceType: &quot;module&quot;, // 允许使用导入</span><br><span class="line">  &#125;,</span><br><span class="line">  extends: [</span><br><span class="line">    &quot;plugin:@typescript-eslint/recommended&quot;, // 使用@ typescript-eslint / eslint-plugin中的推荐规则</span><br><span class="line">    &quot;prettier/@typescript-eslint&quot;, // 使用eslint-config-prettier禁用一些与Prettier冲突的ESLint规则</span><br><span class="line">    &quot;plugin:prettier/recommended&quot; // 启用eslint-plugin-prettier和eslint-config-prettier，使编辑器显示错误提示，确保这项是扩展数组中的最后一个配置</span><br><span class="line">  ],</span><br><span class="line">  rules: &#123;</span><br><span class="line">    // 放置ESLint规则的位置。可用于覆盖从扩展配置中指定的规则</span><br><span class="line">    // 例如 &quot;@typescript-eslint/explicit-function-return-type&quot;: &quot;off&quot;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>4、配置Prettier</p>
+<ul>
+<li><p>这步是可选的，如果pretter的默认配置你觉得用着蛋疼，那么你可以在项目根目录下新建</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.prettierrc</span><br></pre></td></tr></table></figure>
+
+<p>修改它的配置，下面列举一些常用设置，全部为默认选项，请按需修改</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">JS</span><br><span class="line">&#123;</span><br><span class="line">  &quot;printWidth&quot;: 80, //限制每行字符个数</span><br><span class="line">  &quot;tabWidth&quot;: 2, //指定每个缩进级别的空格数</span><br><span class="line">  &quot;useTabs&quot;: false, //使用制表符而不是空格缩进</span><br><span class="line">  &quot;semi&quot;: true, //在语句末尾打印分号</span><br><span class="line">  &quot;singleQuote&quot;: false, //使用单引号而不是双引号</span><br><span class="line">  &quot;trailingComma&quot;: &quot;es5&quot;, //多行时尽可能打印尾随逗号</span><br><span class="line">  &quot;bracketSpacing&quot;: true, //在对象文字中的括号之间打印空格</span><br><span class="line">  &quot;arrowParens&quot;: &quot;always&quot;, //始终给箭头函数的参数加括号</span><br><span class="line">  &quot;htmlWhitespaceSensitivity&quot;: &quot;css&quot;, //指定HTML文件的全局空格敏感度</span><br><span class="line">  &quot;endOfLine&quot;: &quot;lf&quot; //检测换行符类型，如果出现大量换行符报错，可以修改为auto不检测</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>更多配置可参考<a target="_blank" rel="noopener external nofollow noreferrer" href="https://prettier.io/docs/en/options.html">Pretter文档</a></p>
+</li>
+</ul>
+<p>5、其它</p>
+<ul>
+<li>如果还想配置vue、react文件相关的格式化，可以参考下面的说明<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/prettier/eslint-config-prettier">https://github.com/prettier/eslint-config-prettier</a></li>
+<li>抄的这里的，版本升级比较快，这里可以做下参考，一般只需要配置<code>eslint</code>就可以了，两个一起配置会冲突，解决比较麻烦。 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.robertcooper.me/using-eslint-and-prettier-in-a-typescript-project">Using ESLint and Prettier in a TypeScript Project</a></li>
+</ul>
+<h4 id="gitignore-Generator"><a href="#gitignore-Generator" class="headerlink" title=".gitignore Generator"></a>.gitignore Generator</h4><p>VSCode 使用 .gitignore Generator 生成 .gitignore 文件</p>
+<ul>
+<li>搜索安装<a target="_blank" rel="noopener external nofollow noreferrer" href="https://marketplace.visualstudio.com/items?itemName=piotrpalarz.vscode-gitignore-generator">.gitignore Generator</a></li>
+<li><code>ctrl+shift+p</code></li>
+<li>输入：<code>Generate .gitignore File</code></li>
+<li><code>选择 确定</code> or <code>选择 创建 确定</code> or <code>选择 更新 确定</code></li>
+</ul>
+<h4 id="GitLens"><a href="#GitLens" class="headerlink" title="GitLens"></a>GitLens</h4><p>GitLens可以帮助您更好地理解代码。快速查看更改行或代码块的对象，原因和时间。回顾历史，以进一步了解代码的演变方式和原因。毫不费力地探索代码库的历史和演进。</p>
+<ul>
+<li>搜索安装即可或点开安装<a target="_blank" rel="noopener external nofollow noreferrer" href="https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens">GitLens</a></li>
+</ul>
+<h4 id="Import-Cost"><a href="#Import-Cost" class="headerlink" title="Import Cost"></a>Import Cost</h4><p>计算 imports/requires 的大小显示在包后面</p>
+<ul>
+<li>安装 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost">Import Cost</a></li>
+<li>目前支持：<ul>
+<li>默认导入：<code>import Func from &#39;utils&#39;;</code></li>
+<li>整个内容导入：<code>import * as Utils from &#39;utils&#39;;</code></li>
+<li>选择性导入：<code>import &#123;Func&#125; from &#39;utils&#39;;</code></li>
+<li>选择性导入别名：<code>import &#123;orig as alias&#125; from &#39;utils&#39;;</code></li>
+<li>子模块导入：<code>import Func from &#39;utils/Func&#39;;</code></li>
+<li>要求：<code>const Func = require(&#39;utils&#39;).Func;</code></li>
+<li>同时支持<code>Javascript</code>和<code>Typescript</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="Live-Sass-Compiler"><a href="#Live-Sass-Compiler" class="headerlink" title="Live Sass Compiler"></a>Live Sass Compiler</h4><p>VSCode 配置自动编译 Sass</p>
+<ul>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass">安装扩展：Live Sass Compiler</a></li>
+<li>监听 .scss 文件自动编译为 css 文件，非常方便</li>
+</ul>
+<h4 id="Node-modules-resolve"><a href="#Node-modules-resolve" class="headerlink" title="Node modules resolve"></a>Node modules resolve</h4><p>VSCode对配置别名（alias）的支持<br><em>代码中使用 @ (如：<code>import &#123;util&#125; from &#39;@/utils/index&#39;</code>)，鼠标放在 util 上面 按 ctrl ，点击后会定位到 utils/index</em></p>
+<ul>
+<li><p>搜索安装 <code>Node modules resolve</code></p>
+</li>
+<li><p>配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jsconfig.json</span><br></pre></td></tr></table></figure>
+
+<p>，</p>
+<p>vscode doc 官网关于 jsconfig.json 说明</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">JSON</span><br><span class="line">&#123;</span><br><span class="line">    &quot;compilerOptions&quot;: &#123;</span><br><span class="line">        &quot;target&quot;: &quot;es2017&quot;,</span><br><span class="line">        &quot;allowSyntheticDefaultImports&quot;: false,</span><br><span class="line">        &quot;baseUrl&quot;: &quot;./&quot;,</span><br><span class="line">        &quot;paths&quot;: &#123;</span><br><span class="line">            &quot;@/*&quot;: [&quot;src/*&quot;]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;exclude&quot;: [&quot;node_modules&quot;, &quot;dist&quot;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="Search-node-modules"><a href="#Search-node-modules" class="headerlink" title="Search node_modules"></a>Search node_modules</h4><p>VS Code的简单插件，可让您快速浏览项目node_modules目录中的文件。<br>可能是您node_modules从VS Code的内置搜索中排除了该文件夹，这意味着如果您想在其中打开和/或编辑文件node_modules，则必须手动找到它，当node_modules文件夹很大时，这可能会很烦人。</p>
+<ul>
+<li>搜索安装<a target="_blank" rel="noopener external nofollow noreferrer" href="https://marketplace.visualstudio.com/items?itemName=jasonnutter.search-node-modules">Search node_modules</a></li>
+<li><code>ctrl+shift+p</code>—&gt;<code>选择 search node_modules</code>—&gt;输入包命（文件夹名称）—&gt;选择要打开的文件或文件夹</li>
+<li><code>ctrl+n</code>试试—&gt;输入包命（文件夹名称）—&gt;选择要打开的文件或文件夹</li>
+</ul>
+<h4 id="Turbo-Console-Log"><a href="#Turbo-Console-Log" class="headerlink" title="Turbo Console Log"></a>Turbo Console Log</h4><p>对 console.log 插入，注释，删除</p>
+<ul>
+<li>搜索安装<a target="_blank" rel="noopener external nofollow noreferrer" href="https://marketplace.visualstudio.com/items?itemName=ChakrounAnas.turbo-console-log">Turbo Console Log</a></li>
+<li>插入有意义的日志消息<ul>
+<li>选择作为调试主题的变量</li>
+<li>按<code>Ctrl + Alt + L</code></li>
+<li><em>多光标支持</em></li>
+</ul>
+</li>
+<li>注释当前文档中所有由扩展名插入的日志消息<ul>
+<li>要注释当前文档中扩展名插入的所有日志消息，只需按<code>alt + shift + c</code></li>
+</ul>
+</li>
+<li>取消注释当前文档中扩展名插入的所有日志消息<ul>
+<li>取消注释当前文档中由扩展名插入的所有日志消息的全部操作是按<code>alt + shift + u</code></li>
+</ul>
+</li>
+<li>从当前文档中删除所有由扩展名插入的日志消息<ul>
+<li>要从当前文档中删除所有由扩展名插入的日志消息，只需按<code>alt + shift + d</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="vueHelper"><a href="#vueHelper" class="headerlink" title="vueHelper"></a>vueHelper</h4><p>输入 vue 快速生成模板结构</p>
+<ul>
+<li><p>在<code>vscode</code>应用商店输入 <code>oysun.vuehelper</code>，点击安装(install)</p>
+</li>
+<li><p>打开 vue.json 方法1</p>
+<ul>
+<li>文件-&gt;首选项-&gt;用户片段-&gt;输入 vue或vue.json(第一次打开显示 vue,后面打开就会是 vue.json(vue),不理解意思忽略)-&gt;回车</li>
+</ul>
+</li>
+<li><p>打开 vue.json 方法2</p>
+<ul>
+<li><p>alt+f-&gt;p-&gt;s-&gt;s-&gt;enter-&gt;输入 vue或vue.json -&gt;enter</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">JSON</span><br><span class="line">&#123;</span><br><span class="line">  &quot;Print to console&quot;: &#123;</span><br><span class="line">		&quot;prefix&quot;: &quot;vue&quot;,</span><br><span class="line">		&quot;body&quot;: [</span><br><span class="line">			&quot;&lt;template&gt;&quot;,</span><br><span class="line">            &quot;  &lt;div&gt;$0&lt;/div&gt;&quot;,</span><br><span class="line">            &quot;&lt;/template&gt;&quot;,</span><br><span class="line">            &quot;&quot;,</span><br><span class="line">            &quot;&lt;script&gt;&quot;,</span><br><span class="line">            &quot;export default &#123;&quot;,</span><br><span class="line">            &quot;&quot;,</span><br><span class="line">            &quot;&#125;&quot;,</span><br><span class="line">            &quot;&quot;,</span><br><span class="line">            &quot;&lt;/script&gt;&quot;,</span><br><span class="line">            &quot;&lt;style&gt;&quot;,</span><br><span class="line">            &quot;&lt;/style&gt;&quot;</span><br><span class="line">		],</span><br><span class="line">		&quot;description&quot;: &quot;Log output to console&quot;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h4 id="picgo"><a href="#picgo" class="headerlink" title="picgo"></a>picgo</h4><p>VSCode 上传图片到图床<br><em>支持：从剪贴板上传图像、从资源管理器上传图像、从输入框上传图像</em></p>
+<ul>
+<li><p>搜索安装/或打开链接点击安装 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://marketplace.visualstudio.com/items?itemName=Spades.vs-picgo">picgo</a></p>
+</li>
+<li><p>首选项—&gt;设置—&gt;扩展—&gt;找到</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">picgo</span><br></pre></td></tr></table></figure>
+
+<p>进行配置，具体参考文档</p>
+<ul>
+<li>可参考 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://picgo.github.io/PicGo-Doc/zh/guide/config.html#smms">picgo 官网配置文档</a></li>
+<li>可参考 《jsdelivr 各种加速，非常强大》 有 picgo+github 的配置说明</li>
+<li>可参考 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://rogersnowing.cn/post/f0f5c91d.html">《vscode配置picgo实现图床自动上传》</a></li>
+</ul>
+</li>
+</ul>
+<p>快捷方式<br>| 操作系统 | 从剪贴板上传图像 | 从资源管理器上传图像 | 从输入框上传图像 |<br>| — | — | — | — |<br>| Windows / Unix | <code>Ctrl + Alt + U</code> | <code>Ctrl + Alt + E</code> | <code>Ctrl + Alt + O</code> |<br>| 操作系统 | <code>Cmd + Opt + U</code> | <code>Cmd + Opt + E</code> | <code>Cmd + Opt + O</code> |</p>
+<h4 id="Browser-Preview-预览"><a href="#Browser-Preview-预览" class="headerlink" title="Browser Preview 预览"></a>Browser Preview 预览</h4><p>通过扩展安装后，当前机器上还必须有<code>chrome</code>浏览器才能正常预览调试使用</p>
+<ul>
+<li><pre><code>docker
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">的服务器是</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+Debian
+</code></pre>
+<p>，参考</p>
+<p>Debian安装chrome</p>
+<ul>
+<li>下载安装包：<code>wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb</code></li>
+<li>开始安装：<code>sudo apt install ./google-chrome-stable_current_amd64.deb</code></li>
+<li>安装完成后刷新<code>vscode</code>即可使用</li>
+</ul>
+</li>
+</ul>
+</article><div class="post-tools"><div class="post-tools-left"><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-hamburger"></i> 打赏作者</div><div class="reward-main"><ul class="reward-all"><ul class="reward-group"><li class="reward-item"><a href="https://npm.elemecdn.com/webxc@1.0.0/lxfs/wechat.png" rel="external nofollow noreferrer" target="_blank"><img class="post-qr-code-img" src="https://npm.elemecdn.com/webxc@1.0.0/lxfs/wechat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/webxc@1.0.0/lxfs/alipay.jpg" rel="external nofollow noreferrer" target="_blank"><img class="post-qr-code-img" src="https://npm.elemecdn.com/webxc@1.0.0/lxfs/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/sponsor/#特别鸣谢"><div class="reward-text">赞赏名单</div><div class="reward-dec">感谢给予支持的朋友，您的支持是我前进的动力。</div></a></ul></div></div><div class="post_share"><div class="social-share" data-image="https://npm.elemecdn.com/webxc@1.0.0/cover/vscode1.jpg" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn1.tianli0.top/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://npm.elemecdn.com/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Vscode/">#Vscode</a></div></div></div></div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-info"><span>Vscode笔记-24款插件</span></span></div><div class="post-copyright__type"><span class="post-copyright-info"><a href="https://c.webxc.ml/posts/1400581313.html">https://c.webxc.ml/posts/1400581313.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-info">本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://c.webxc.ml" target="_blank">XC's Blog</a></span></div></div></div><div id="pagination-con"><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/4073997736.html"><img class="prev-cover" src="https://npm.elemecdn.com/webxc@1.0.0/cover/cover2.png" onerror="onerror=null;src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">免费常用的前端CDN库</div></div></a></div><div class="next-post pull-right"><a href="/posts/404922574.html"><img class="next-cover" src="https://npm.elemecdn.com/webxc@1.0.0/cover/css1.jpg" onerror="onerror=null;src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">CSS笔记</div></div></a></div></nav></div><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 猜你喜欢</span></div><div class="relatedPosts-list"><div class="post grid"><div class="grid-img"><a href="/posts/1687275572.html" title="记录 Vscode 插件"><img class="cover" src="https://npm.elemecdn.com/webxc@1.0.0/cover/vscode.jpg" alt="cover"></a></div><a class="grid-cat" href="/categories/Vscode/">Vscode</a><div class="grid-title"><a href="/posts/1687275572.html" title="记录 Vscode 插件">记录 Vscode 插件</a></div><div class="grid-meta"><span class="times"><i class="far fa-calendar-alt fa-fw"></i> 2021-07-03</span></div></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar"><div class="author-info__sayhi" id="author-info__sayhi">👋 你好！我是</div><div class="author-info__name">XC's Blog</div><div class="author-info__description">我会在这里分享踩过的坑，干货笔记，以及生活中的感悟、吐槽、看法，与君共勉。</div><div class="author-info__description2">精致的五官是心动的开始，迷人的气质是动情的深渊。</div><a class="author-info__avatar" href="/about/"><img class="avatar-background" src="https://cdn1.tianli0.top/gh/realwds/cdn@master/person/awds-79k.png" onerror="this.onerror=null;this.src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="avatar"/></a></div><div class="card-info-social-icons"><a class="social-icon" href="https://c.webxc.ml/"><i class="fab fa-edge"></i></a><a class="social-icon" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/web-xc"><i class="fab fa-github"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content"><p>有问题评论留言，微信不解答问题，添加请注明来意。</p><div class="content_qrcode"><img src="https://npm.elemecdn.com/webxc@1.0.0/lxfs/wechat.jpg" alt="添加微信"></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#C-C"><span class="toc-text">C&#x2F;C++</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java"><span class="toc-text">Java</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Go"><span class="toc-text">Go</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hive-SQL"><span class="toc-text">Hive SQL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML-CSS"><span class="toc-text">HTML&#x2F;CSS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Markdown"><span class="toc-text">Markdown</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python"><span class="toc-text">Python</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%84%E7%A7%8D%E7%A5%9E%E5%99%A8"><span class="toc-text">各种神器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Auto-Close-Tag"><span class="toc-text">Auto Close Tag</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Auto-Rename-Tag"><span class="toc-text">Auto Rename Tag</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Better-Comments"><span class="toc-text">Better Comments</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Bracket-Pair-Colorizer"><span class="toc-text">Bracket Pair Colorizer</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CodeIf"><span class="toc-text">CodeIf</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Excel-Viewer"><span class="toc-text">Excel Viewer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ESLint"><span class="toc-text">ESLint</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jslint"><span class="toc-text">Jslint</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jupyter"><span class="toc-text">jupyter</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#leetcode"><span class="toc-text">leetcode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#live-server"><span class="toc-text">live server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Path-Intellisense"><span class="toc-text">Path Intellisense</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Remote-SSH"><span class="toc-text">Remote - SSH</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tabnine"><span class="toc-text">Tabnine</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Terminal-Here"><span class="toc-text">Terminal Here</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vscode-icons"><span class="toc-text">vscode-icons</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#zhihu"><span class="toc-text">zhihu</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#vscode%E5%BD%93%E4%B8%AD%E5%A5%BD%E7%94%A8%E7%9A%84%E6%8F%92%E4%BB%B6%E8%BF%98%E6%9C%89%E9%9D%9E%E5%B8%B8%E5%A4%9A%EF%BC%8C%E5%A6%82%E6%9E%9C%E8%BF%98%E7%9F%A5%E9%81%93%E4%BB%80%E4%B9%88%E5%85%B6%E4%BB%96%E7%A5%9E%E5%99%A8%E7%9A%84%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%9C%A8%E8%AF%84%E8%AE%BA%E5%8C%BA%E7%95%99%E8%A8%80%E3%80%82"><span class="toc-text">vscode当中好用的插件还有非常多，如果还知道什么其他神器的，可以在评论区留言。</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90%E4%BA%86%E8%A7%A3%E3%80%91GitHub-%E4%BB%A3%E7%A0%81%E4%B8%80%E9%94%AE%E8%BD%AC-VS-Code%EF%BC%8C%E5%A4%AA%E5%A5%BD%E7%94%A8%E4%BA%86%EF%BC%81"><span class="toc-text">【了解】GitHub 代码一键转 VS Code，太好用了！</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E8%BF%87%E5%9C%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%BE%93%E5%85%A5-code-%E4%BD%BF-vscode-%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-text">通过在命令行输入 code . 使 vscode 打开文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%88%E7%AB%AF%E5%88%87%E6%8D%A2"><span class="toc-text">终端切换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7"><span class="toc-text">调试技巧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A9%E5%B1%95"><span class="toc-text">扩展</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Settings-Sync-%E4%B8%8A%E4%BC%A0%E5%92%8C%E6%8B%89%E5%8F%96"><span class="toc-text">Settings Sync 上传和拉取</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ESlint-%E4%BD%BF%E7%94%A8"><span class="toc-text">ESlint 使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ESlint-Prettier"><span class="toc-text">ESlint+Prettier</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gitignore-Generator"><span class="toc-text">.gitignore Generator</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#GitLens"><span class="toc-text">GitLens</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Import-Cost"><span class="toc-text">Import Cost</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Live-Sass-Compiler"><span class="toc-text">Live Sass Compiler</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Node-modules-resolve"><span class="toc-text">Node modules resolve</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Search-node-modules"><span class="toc-text">Search node_modules</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Turbo-Console-Log"><span class="toc-text">Turbo Console Log</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vueHelper"><span class="toc-text">vueHelper</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#picgo"><span class="toc-text">picgo</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Browser-Preview-%E9%A2%84%E8%A7%88"><span class="toc-text">Browser Preview 预览</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/7f86.html" title="JavaScript 第四天"><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/postss/js1.jpg" onerror="this.onerror=null;this.src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="JavaScript 第四天"/></a><div class="content"><a class="title" href="/posts/7f86.html" title="JavaScript 第四天">JavaScript 第四天</a><time datetime="2023-02-07T06:00:00.000Z" title="发表于 2023-02-07 14:00:00">2023-02-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/6e+47.html" title="JavaScript 第三天"><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/postss/js1.jpg" onerror="this.onerror=null;this.src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="JavaScript 第三天"/></a><div class="content"><a class="title" href="/posts/6e+47.html" title="JavaScript 第三天">JavaScript 第三天</a><time datetime="2022-12-27T15:30:00.000Z" title="发表于 2022-12-27 23:30:00">2022-12-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/623e.html" title="JavaScript 第二天"><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/postss/js1.jpg" onerror="this.onerror=null;this.src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="JavaScript 第二天"/></a><div class="content"><a class="title" href="/posts/623e.html" title="JavaScript 第二天">JavaScript 第二天</a><time datetime="2022-12-05T09:00:00.000Z" title="发表于 2022-12-05 17:00:00">2022-12-05</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-social"><a class="deal_link" href="https://github.com/web-xc" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="deal_link" href="https://gitlab.com/web-xc" rel="external nofollow noreferrer" target="_blank" title="GitLab"><i class="fab fa-gitlab"></i></a><a class="deal_link" href="https://gitee.com/web-xc" rel="external nofollow noreferrer" target="_blank" title="Gitee"><i class="fab fa-github-alt"></i></a><img class="footer_mini_logo" src="https://npm.elemecdn.com/webxc@1.0.0/logo/logo.jpg" onerror="this.onerror=null;this.src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="回到顶部" onclick="btf.scrollToDest(0,500)"/><a class="deal_link" href="tencent://message/?uin=2848141597&amp;Site=&amp;Menu=yes" rel="external nofollow noreferrer" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="deal_link" href="mailto:2848141597@qq.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="deal_link" href="/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss"></i></a></div><div id="footer-container"><div class="footer-group"><h3 class="footer-title">关于</h3><div class="footer-links"><a class="footer-item" href="/about/">关于本站</a><a class="footer-item" href="/sponsor/">赞赏博主</a><a class="footer-item" href="/statistics/">博客统计</a></div></div><div class="footer-group"><h3 class="footer-title">文章</h3><div class="footer-links"><a class="footer-item" href="/archives/">文章列表</a><a class="footer-item" href="/categories/">全部分类</a><a class="footer-item" href="/tags/">全部标签</a></div></div><div class="footer-group"><h3 class="footer-title">分类</h3><div class="footer-links"><a class="footer-item" href="/categories/JavaScript笔记/">JavaScript笔记</a><a class="footer-item" href="/categories/移动开发/">移动开发</a><a class="footer-item" href="/categories/学习笔记-CSS/">学习笔记-CSS</a></div></div><div class="footer-group"><h3 class="footer-title">生活</h3><div class="footer-links"><a class="footer-item" href="/essay/">随笔说说</a><a class="footer-item" href="/talking/">生活杂谈</a><a class="footer-item" href="学习笔记-HTML">学习笔记-HTML</a></div></div><div class="footer-group"><h3 class="footer-title">导航</h3><div class="footer-links"><a class="footer-item" href="/link/">友情链接</a><a class="footer-item" href="/tools/">在线工具</a><a class="footer-item" href="https://blog1.webxc.ml" rel="external nofollow noreferrer" target="_blank">Qexo管理</a></div></div><div class="footer-group"><h3 class="footer-title">协议</h3><div class="footer-links"><a class="footer-item" href="/privacy/">隐私协议</a><a class="footer-item" href="/copyright/">版权声明</a><a class="footer-item" href="/tousu/">侵权投诉</a></div></div></div><div id="footer-banner"><div class="footer-banner-links"><div class="footer-banner-left"><span class="copyright">&copy;2021 - 2023 By XC's Blog</span></div><div class="footer-banner-right"><a class="footer-banner-link" target="_blank" href="https://realwds.com" rel="external nofollow noreferrer">XC's Blog</a></div></div></div><script src="https://cdn1.tianli0.top/gh/briangonzalez/rgbaster.js@1.1.0/rgbaster.min.js"></script><script data-pjax="data-pjax" src="https://cdn1.tianli0.top/gh/web-xc/blog1/js/custom/realwds.js"></script><div class="js-pjax"><script>coverColor(),sayhi()</script></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-tip">搜搜看，说不定你就发现了我 🙊</div><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="https://cdn1.tianli0.top/gh/realwds/cdn/js/realwds-blog-utils.min.js"></script><script src="https://npm.elemecdn.com/hexo-theme-butterfly@3.7.1/source/js/main.js"></script><script defer src="https://npm.elemecdn.com/node-snackbar/dist/snackbar.min.js"></script><script defer src="https://npm.elemecdn.com/hexo-theme-butterfly@3.7.1/source/js/search/local-search.js"></script><div class="js-pjax"><script>(()=>{
+  const $countDom = document.getElementById('twikoo-count')
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://blog2.webxc.ml/',
+      region: ''
+    }, null))
+  }
+
+  const getCount = () => {
+    twikoo.getCommentsCount({
+      envId: 'https://blog2.webxc.ml/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      $countDom.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const loadTwikoo = (bool = false) => {
+    if (typeof twikoo === 'object') {
+      init()
+      bool && $countDom && setTimeout(getCount,0)
+    } else {
+      getScript('https://npm.elemecdn.com/twikoo/dist/twikoo.all.min.js').then(()=> {
+        init()
+        bool && $countDom && setTimeout(getCount,0)
+      })
+    }
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo(true)
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script data-pjax src="https://npm.elemecdn.com/pace-js@1.2.4/pace.min.js"></script><script src="https://npm.elemecdn.com/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/talking/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//npm.elemecdn.com/penndu@1.0.0/bsz.js"></script></div></body></html>

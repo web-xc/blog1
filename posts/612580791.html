@@ -1,0 +1,492 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Magisk卡刷-通刷官方-了解Fastboot | XC's Blog</title><meta name="keywords" content="安卓玩机"><meta name="author" content="XC's Blog"><meta name="copyright" content="XC's Blog"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="root，类似于Windows系统中的Administrator，root是Linux系统中的超级管理员用户帐户，该帐户拥有整个系统的最高权限，可方便地对于系统的部件进行删除或更改。   本教程正常情况无需双清或重装系统，可以进行OTA升级。升级后重复教程即可重新root。但还是要记得备份数据后进行以下操作。注：刷机有风险，玩机需谨慎。 操作不当所造成后果，与我无瓜  开始教程解锁手机bl锁大部">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Magisk卡刷-通刷官方-了解Fastboot">
+<meta property="og:url" content="https://c.webxc.ml/posts/612580791.html">
+<meta property="og:site_name" content="XC&#39;s Blog">
+<meta property="og:description" content="root，类似于Windows系统中的Administrator，root是Linux系统中的超级管理员用户帐户，该帐户拥有整个系统的最高权限，可方便地对于系统的部件进行删除或更改。   本教程正常情况无需双清或重装系统，可以进行OTA升级。升级后重复教程即可重新root。但还是要记得备份数据后进行以下操作。注：刷机有风险，玩机需谨慎。 操作不当所造成后果，与我无瓜  开始教程解锁手机bl锁大部">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://npm.elemecdn.com/webxc@1.0.0/cover/root.jpg">
+<meta property="article:published_time" content="2021-09-01T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-01-27T14:31:41.672Z">
+<meta property="article:author" content="XC&#39;s Blog">
+<meta property="article:tag" content="安卓玩机">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://npm.elemecdn.com/webxc@1.0.0/cover/root.jpg"><link rel="shortcut icon" href="https://npm.elemecdn.com/webxc@1.0.0/logo/logo.jpg"><link rel="canonical" href="https://c.webxc.ml/posts/612580791"><link rel="preconnect" href="//npm.elemecdn.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="https://cdn1.tianli0.top/gh/web-xc/blog1@c2a7976/css/index.css"><link rel="stylesheet" href="https://npm.elemecdn.com/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":500,"position":"top","messagePrev":"距离上次更新已经过了","messageNext":"天，文章所描述的内容可能已经发生变化，请留意。"},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":60,"languages":{"author":"作者: XC's Blog","link":"链接: ","source":"来源: XC's Blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"var(--wds-main)","bgDark":"var(--wds-main)","position":"bottom-center"},
+  source: {
+    jQuery: 'https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://npm.elemecdn.com/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://npm.elemecdn.com/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://npm.elemecdn.com/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://npm.elemecdn.com/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Magisk卡刷-通刷官方-了解Fastboot',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-01-27 22:31:41'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><link rel="stylesheet" href="https://npm.elemecdn.com/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://cdn1.tianli0.top/gh/web-xc/blog1@c2a7976/css/custom/realwds.css"><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="XC's Blog" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://npm.elemecdn.com/webxc@1.0.0/logo/logo.jpg" onerror="onerror=null;src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">61</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">21</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">20</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 文库</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-book-open"></i><span> 文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-th-large"></i><span> 全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 娱乐</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/gif/"><i class="fa-fw fab fa-yelp"></i><span> 每日动图</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐鉴赏</span></a></li><li><a class="site-page child" href="/media/"><i class="fa-fw fas fa-film"></i><span> 视频解析</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 网站</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-user-friends"></i><span> 友情链接</span></a></li><li><a class="site-page child" href="/tools/"><i class="fa-fw fas fa-tools"></i><span> 在线工具</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 我的</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-user-circle"></i><span> 关于本站</span></a></li><li><a class="site-page child" href="/sponsor/"><i class="fa-fw fab fa-bitcoin"></i><span> 赞赏博主</span></a></li><li><a class="site-page child" href="/statistics/"><i class="fa-fw fas fa-chart-pie"></i><span> 博客统计</span></a></li><li><a class="site-page child" href="/essay/"><i class="fa-fw fab fa-twitch"></i><span> 随笔说说</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><div id="blog_name"><a id="site-name" href="/">XC's Blog</a></div><div id="page-name"><a id="page-name-text" onclick="btf.scrollToDest(0,500)">Magisk卡刷-通刷官方-了解Fastboot</a></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 文库</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-book-open"></i><span> 文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-th-large"></i><span> 全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 娱乐</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/gif/"><i class="fa-fw fab fa-yelp"></i><span> 每日动图</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐鉴赏</span></a></li><li><a class="site-page child" href="/media/"><i class="fa-fw fas fa-film"></i><span> 视频解析</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 网站</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-user-friends"></i><span> 友情链接</span></a></li><li><a class="site-page child" href="/tools/"><i class="fa-fw fas fa-tools"></i><span> 在线工具</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 我的</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-user-circle"></i><span> 关于本站</span></a></li><li><a class="site-page child" href="/sponsor/"><i class="fa-fw fab fa-bitcoin"></i><span> 赞赏博主</span></a></li><li><a class="site-page child" href="/statistics/"><i class="fa-fw fas fa-chart-pie"></i><span> 博客统计</span></a></li><li><a class="site-page child" href="/essay/"><i class="fa-fw fab fa-twitch"></i><span> 随笔说说</span></a></li></ul></div></div></div><div id="nav-right"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div id="darkmode_navswitch"><a class="site-page darkmode_switchbutton" onclick="navFn.switchDarkMode()"><i class="fas fa-adjust">     </i></a></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></div></nav><div class="coverdiv loaded" id="coverdiv"><img id="post-cover" src="https://npm.elemecdn.com/webxc@1.0.0/cover/root.jpg" alt="cover"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><span class="post-meta-categories"><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AE%89%E5%8D%93%E7%8E%A9%E6%9C%BA/">安卓玩机</a></span><span class="post-meta-date"><time datetime="2021-09-01T00:00:00.000Z" title="2021-09-01 08:00:00">2021-09-01</time></span></div></div><h1 class="post-title">Magisk卡刷-通刷官方-了解Fastboot</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-wordcount"><i class="fas fa-file-word fa-fw post-meta-icon"></i><span class="word-count">3.9k</span><i class="fas fa-stopwatch fa-fw post-meta-icon"></i><span>12分钟</span></span><span class="post-meta-pv-cv" id="" data-flag-title="Magisk卡刷-通刷官方-了解Fastboot"><i class="fab fa-hotjar fa-fw post-meta-icon"></i><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><div id="article-all"><article class="post-content" id="article-container"><blockquote>
+<p>root，类似于<a target="_blank" rel="noopener external nofollow noreferrer" href="https://baike.baidu.com/item/Windows/165458">Windows</a>系统中的Administrator，root是<a target="_blank" rel="noopener external nofollow noreferrer" href="https://baike.baidu.com/item/Linux%E7%B3%BB%E7%BB%9F/1732935">Linux系统</a>中的<a target="_blank" rel="noopener external nofollow noreferrer" href="https://baike.baidu.com/item/%E8%B6%85%E7%BA%A7%E7%AE%A1%E7%90%86%E5%91%98/3602694">超级管理员</a>用户帐户，该帐户拥有整个系统的最高权限，可方便地对于系统的部件进行删除或更改。</p>
+</blockquote>
+<ul>
+<li>本教程正常情况无需双清或重装系统，可以进行OTA升级。升级后重复教程即可重新root。<br>但还是要记得备份数据后进行以下操作。<br>注：刷机有风险，玩机需谨慎。 操作不当所造成后果，与我无瓜</li>
+</ul>
+<h3 id="开始教程"><a href="#开始教程" class="headerlink" title="开始教程"></a>开始教程</h3><h4 id="解锁手机bl锁"><a href="#解锁手机bl锁" class="headerlink" title="解锁手机bl锁"></a>解锁手机bl锁</h4><p>大部分手机官方为了保证手机的安全，为手机设置了BL锁，在BL锁未解的情况下，用户是不能自行刷机或获取ROOT权限的，所以要想root就必须先解bl锁。</p>
+<blockquote>
+<p>华为和ov貌似不可以，具体自己手机是哪个牌子的可以去查一查是否支持解bl锁，下文以小米手机为例</p>
+</blockquote>
+<p>解锁bl锁之前要先把自己的小米账号跟手机绑定上</p>
+<p>之后直接百度搜索小米解锁bl锁<img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fastroot%20(4).png" alt="75SqCn.png"></p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fastroot%20(2).png" alt="75pkgx.png"></p>
+<p>下载完之后解压大概是得到这样的目录<img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fastroot%20(1).png"></p>
+<p>打开miflash_unlock.exe并登录自己的小米账号进行解锁，解锁方式为在关机下音量下键与电源键一起按，当你看到这幅画面就证明你成功进入了Bootloader，之后就一路下一步就好了。<img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fastroot%20(3).png" alt="75pQPA.png"></p>
+<blockquote>
+<p>如果无法识别手机请打开手机的开发者选项并打开usb调试，miui的开发者选项是点击我的设备→全部参数→连续按miui版本就打开了开发者选项</p>
+</blockquote>
+<p>ps:小米手机解bl锁是需要等七天的，七天之后才可以解锁</p>
+<p><strong>注意一定要备份，一定要备份，一定要备份！！！</strong></p>
+<h3 id="刷入第三方rec"><a href="#刷入第三方rec" class="headerlink" title="刷入第三方rec"></a>刷入第三方rec</h3><p>REC全程Recovery,通俗一点讲就是手机刷机软件，手机开机时按住电源键和音量＋建就可以进入到rec</p>
+<p>rec分为官方rec和第三方rec这个就是官方rec，啥玩意也没有，有的有很鸡肋，所以这里我们可以刷入第三方rec。</p>
+<p>第三方rec功能十分之多，可以直接一键root,这里推荐TWRP。</p>
+<h3 id="刷入第三方rec-1"><a href="#刷入第三方rec-1" class="headerlink" title="刷入第三方rec"></a>刷入第三方rec</h3><p>首先要做的就是找到你手机对应的第三方rec,集合文件的下载地址： 天翼云盘 <a target="_blank" rel="noopener external nofollow noreferrer" href="http://t.cn/A6ADTtwL"><em>O</em>网页链接</a>（访问码：vv8a）<br>自行找到与自己手机对应的rec下载</p>
+<p>下载完成后解压直接运行twrp一键刷入工具bat</p>
+<p>部分机型可能没有这个文件，别慌你只需要找到一个有这个文件的，然后右键记事本打开它，把我画上的这个镜像文件名字改成你自己手机对应的rec里面带的镜像文件，改完之后保存把这个改完之后的bat文件放到你手机对应rec的文件夹里运行就可以了，记得运行时手机要处在Bootloader模式。</p>
+<h3 id="root系统"><a href="#root系统" class="headerlink" title="root系统"></a>root系统</h3><p>此时你的手机就会重启进入TWRP，这个时候点击高级→关闭AVB2.0校验</p>
+<p>之后还是点击高级→root系统，这里会自动安装面具，之后手机会自动重启，手机上会多一个面具</p>
+<p>这个时候你的手机就已经root成功了，你可以选择很多框架比如xp exp lsp框架，反正root好处多多，还有太多功能等待发掘</p>
+<hr>
+<h4 id="最后总结一下关于第三方REC的一些小技巧和知识"><a href="#最后总结一下关于第三方REC的一些小技巧和知识" class="headerlink" title="最后总结一下关于第三方REC的一些小技巧和知识"></a>最后总结一下关于第三方REC的一些小技巧和知识</h4><p><strong>第三方REC有哪些？</strong></p>
+<ul>
+<li>LR.Team定制版TWRP、OrangeFox（橙狐）等...</li>
+</ul>
+<p>以上提供了几个主流的第三方REC下载地址，几乎覆盖了全部机型。<br><strong>强烈推荐</strong> LR.Team定制版TWRP！</p>
+<p><strong>双清、三清、四清、五清、格式化Data、恢复出厂设置各是指的什么？</strong></p>
+<p>先介绍一下这几个分区：</p>
+<p>一般的安卓系统都有以下几个存储空间分区：Data，Cache，Dalvik Cache，System，内置存储几个。SD卡是指外置TF卡，USB-OTG是指外挂的U盘，这两个不属于手机自身的存储设备。</p>
+<p>它们各自有以下作用：</p>
+<p>Data分区：保存应用程序的相关数据数据</p>
+<p>Cache：保存系统以及应用的缓存数据</p>
+<p>Dalvik Cache：安卓系统启动时，会建立一个所有程序的信任分支、以优化缓存文件，加快启动速度，即虚拟机缓存。</p>
+<p>System分区：系统固件分区</p>
+<p>内置存储分区：手机的内部存储文件（用户直接可见，即文件管理显示的内容空间）</p>
+<p>下面说说双清、三清、四清、五清、格式化Data、恢复出厂设置的区别：</p>
+<p><strong>双清：</strong>清除Data、Cache</p>
+<p>进入第三方的Rec，进入后点击【清除】，此时下面有个【滑动按钮确认恢复出厂设置】，即为双清。</p>
+<p>以下清除操作属于高级操作，需要进入高级清除界面。</p>
+<p><strong>三清：</strong>清除Data、Cache和Dalvik Cache。</p>
+<p><strong>四清：</strong>清除Data、Cache、DalvikCache和System分区。</p>
+<p><strong>五清：</strong>清除了Data、Cache、Dalvik Cache、System分区和内置存储。</p>
+<p><strong>格式化DATA分区：</strong>全盘格式化</p>
+<p>格式化Data分区以及五清操作会清除内部存储，这意味所有文件会全部丢失；所以在进行此操作之前，务必转移数据；尤其是ROM固件，很多人一时上头在格式化Data或者五清之后，把ROM固件也删除了，导致时手机内部没有固件可以刷入。</p>
+<p><strong>哪些情况下可以进第三方REC（如何进第三方REC）？</strong></p>
+<p>1：不同的手机不一样，对小米系列来说，长按电源键+音量加，待手机重启之后，松开电源键，继续按住音量加即可进入</p>
+<p>2：在系统更新界面，选择“重启到Recovery”，也可以进入第三方REC；某些官改会在开机界面提供“卡刷模式”，亦即第三方REC模式。</p>
+<p>3：卡米等情况下也可以进，方法如1</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fastroot%20(17).webp" alt="图片"></p>
+<p><strong>第三方REC如何设置中文（前提是本身支持，某些不支持中文）：</strong></p>
+<p>1：如果你是首次刷入，在进入首页之前，选择“SelectLanguage”这个按钮，找到“Chinese（Simplified）”这个选项，然后确认即可</p>
+<p>2：如果你已经进入了首页，可以点击“Setting”，选择第四个图标，选择语言。然后确认。</p>
+<p><strong>第三方REC设置：</strong><br>1：设置页，可以调节震动，语言，时间，</p>
+<p>2：建议关闭“ZIP签名校验”功能</p>
+<p>3：某些第三方REC的高级设置中有一些“重载主题”、ROOT系统、取消强制加密、恢复官方REC、签名boot、清除开机密码，清除电池信息等功能</p>
+<p>4：第三方REC中有文件管理功能，并且是系统级的；你可以在这里进行一些应用的删除，文件修改等操作；</p>
+<p>一些常用的目录：<br>1：sdcard：内部存储目录（即手机系统中文件管理显示的目录）</p>
+<p>2：external_sd：外置TF卡目录</p>
+<p>3：QQ文件目录：sdcard/Tencent/QQfile_recv</p>
+<p>4：系统下载目录：sdcard/Download</p>
+<p><strong>注意：</strong></p>
+<p>1：当系统进行了安卓底层更新的时候，一般来说，第三方REC也需要自己进行升级；否则会出现刷ROM错误。</p>
+<p>2：在进行“更新官方系统”或者第一次刷入第三方REC的操作时，务必在重启手机之前刷入Magisk框架；防止第三方REC恢复成官方REC。</p>
+<p><strong>其他：</strong></p>
+<p>1：在第三方REC模式下，手机可以用数据线直接连接电脑，进行数据传输</p>
+<p>2：第三方REC下，可以使用截图；和系统截图一样，都是按下电源键+音量减，实现截图操作。所以以后如果要将刷机过程中的错误发给别人看，最好用截图功能。</p>
+<hr>
+<h4 id="你真的了解Fastboot模式吗-硬核科普！"><a href="#你真的了解Fastboot模式吗-硬核科普！" class="headerlink" title="你真的了解Fastboot模式吗? 硬核科普！"></a><strong>你真的了解Fastboot模式吗? 硬核科普！</strong></h4><p>不知道机友们对Fastboot模式了解多少，或许大部分机友只在解锁的时候进Fastboot，刷TWRP的时候进Fastboot，好奇这个模式还能干什么？</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fastroot%20(16).webp" alt="图片"></p>
+<p>本篇文章就结合我的经验充分解释一下有关Fastboot在普通用户层面的相关知识，可能存在差异，后续更新完善，本人文字功底较差也欢迎指正！</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fastroot%20(15).webp" alt="图片"></p>
+<p>Fastboot模式与刷机紧密的联系着，有一种说法，能进Fastboot就不是真砖，当然，只针对经验丰富的老司机，新手来说，我的手机开不了机了，就是砖头。</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fastroot%20(14).webp" alt="图片"></p>
+<p><strong>CMD命令行</strong></p>
+<p>在没有适配adb环境的电脑上，不可以直接用开始菜单里的cmd来执行adb/fastboot命令，后续抽空写一下全局adb教程</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fastroot%20(13).webp" alt="图片"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">## https://wwi.lanzoui.com/iAQUYskx50b## 下载谷歌官方提供的工具，第一个文件夹里有fastboot驱动</span><br></pre></td></tr></table></figure>
+
+<p><strong>进入Fastboot模式</strong></p>
+<p>彻底关机下:</p>
+<p>（小米/联想/努比亚）: 音量下＋电源键(长按)</p>
+<p>（一加）: 三个键一起按住(音量上+下+电源键)</p>
+<p>（三星）: 插上数据线-音量上+下+电源键进入Recovery-用音量键选择reboot to bootloader再按电源键进入</p>
+<p>仅举例部分，可到各大机型板块或网上搜索关键字</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fastroot%20(12).webp" alt="图片"></p>
+<p><strong>连接电脑</strong></p>
+<p>Fastboot模式连接手机，如下图所示，没有驱动</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fastroot%20(11).webp" alt="图片"></p>
+<p>Fastboot模式连接手机，如下图所示，连接正常（名称可能差异）</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fastroot%20(10).webp" alt="图片"></p>
+<p>驱动在上面有提供</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fastroot%20(9).webp" alt="图片"></p>
+<p><strong>解锁BL</strong></p>
+<p>解锁会全盘格式化，各家厂商解锁方法不一</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastboot oem unlock ## 一加 Fastboot命令 http://www.miui.com/unlock ## 小米 网页申请</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fastroot%20(5).png" alt="图片"></p>
+<p>仅举例部分，可到各大机型板块或网上搜索关键字</p>
+<p>解锁成功每次开机都会弹出警告页面(小米定制在第一屏)</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fastroot%20(8).webp" alt="图片"></p>
+<p><strong>查看是否解锁</strong></p>
+<p>最后一行显示locked视为未解锁</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fastroot%20(7).webp" alt="图片"></p>
+<p>最后一行显示unlocked视为已解锁</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fastroot%20(6).webp" alt="图片"></p>
+<p>小米的开机第一屏有把锁判定</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fastroot%20(5).webp" alt="图片"></p>
+<p><strong>解除加密</strong></p>
+<p>vbmeta分区加密的作用是保护系统不被修改，如果你想ROOT或者是想删掉一些系统文件，则必须去除，其原理是做空</p>
+<p>通过以下命令:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">## https://wwi.lanzoui.com/iWlOVvdiffcfastboot --disable-verity --disable-verification flash vbmeta vbmeta.img</span><br><span class="line">## https://wwi.lanzoui.com/iaJ6Bvdifgdfastboot flash vbmeta_system vbmeta_system.img</span><br></pre></td></tr></table></figure>
+
+<p>不去除加密的情况下修改系统文件，会循环卡死Fastboot</p>
+<p>在预装Android10.0的手机上，想要修改系统文件，将涉及到一个新的概念</p>
+<p>-动态分区-</p>
+<p><strong>动态分区是什么?</strong></p>
+<p>Android存放系统文件的分区有:</p>
+<p>System/Vendor/odm等</p>
+<p>非预装安卓10.0的手机，例如红米K20Pro，获取ROOT权限以后，就可以通过MT自己精简系统了，把一些不会用到的预装APP删了重启，OK这些APP没了</p>
+<p>但如果！我的手机出厂就是安卓10.0及安卓10.0以上的系统，就拿我的红米K30S来说，按照大佬们的方法获取了ROOT权限，删了个不会用到的预装APP重启，你们猜会怎样?</p>
+<p>没错，就是卡兔子(Fastboot模式)</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fastroot%20(4).webp" alt="图片"></p>
+<p>其根本的原因就是因为动态分区。本来单独固定大小的三个系统分区</p>
+<p>(System/Vendor/odm)</p>
+<p>合并成了一个super分区，其里面包含的子分区是可以随意调整大小的</p>
+<p>打个比方: </p>
+<p>super分区=10G</p>
+<p>System=5G</p>
+<p>Vendor=4G</p>
+<p>odm=1G</p>
+<p>我可以把System调整为4G，把odm扩大到2G</p>
+<p>在非动态分区的情况下，此操作异常危险且无法通过OTA完成</p>
+<p>在动态分区的情况下，可以轻松通过修改super镜像完成，且可以通过OTA系统更新到用户的手机</p>
+<p>变化导致无法直接修改系统文件，但第三方ROM可以解决，例如一些官改就支持修改系统分区，只能说仅仅原版系统有这种限制，至于原因就不得而知了</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fastroot%20(3).webp" alt="图片"></p>
+<p><strong>有哪些系统分区？</strong></p>
+<p>早期的刷机包非常简陋，整个刷机包才一两百m，只有一个系统分区System(不包括boot和底层)</p>
+<p>安卓8.0开始，从System里分离出来了Vendor</p>
+<p>安卓10.0开始，从System里分离出来了product</p>
+<p>安卓11.0开始，从System里分离出来了system_ext</p>
+<p>当前存放系统文件的分区有: </p>
+<p>System+Vendor+product+system_ext</p>
+<p><strong>刷入镜像</strong></p>
+<p>通过以上，我们对系统分区有一定了解，而镜像的意思就是存放系统文件的压缩包，这跟我们平常压缩的文件不同，是一种特定的压缩形态，能保持每个文件对应的权限，在刷机包里一般是后缀为img的文件(卡刷包一般压缩为dat/br)</p>
+<p>Fastboot模式可以刷入img格式的镜像，例如刷入System分区镜像:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastboot flash system xx.img## XX.img指镜像目录## system指将刷入的分区</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fastroot%20(2).webp" alt="图片"></p>
+<p>刷入Vendor分区镜像：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastboot flash vendor xx.img## XX.img指镜像目录## vendor指将刷入的分区</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fastroot%20(1).webp" alt="图片"></p>
+<p><strong>Fastbootd</strong></p>
+<p>Fastbootd是动态分区专属的一个模式，属于Recovery分区的功能。部分TWRP也适配</p>
+<p>预装动态分区的手机上是无法通过在Fastboot模式刷入系统镜像的(指super内的子分区)，只能完整刷入super.img</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fastroot%20(18).webp" alt="图片"></p>
+<p>在fastboot下执行:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Fastboot reboot fastboot</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fasterroot%20(16).webp" alt="图片"></p>
+<p>进入Fastbootd方可正常刷入</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fasterroot%20(15).webp" alt="图片"></p>
+<p><strong>双分区概念</strong></p>
+<p>网上相关科普很多，你可以理解成我的手机里有两个大分区，通常我们手机系统更新步骤是</p>
+<p>下载系统包-点击更新-手机重启-离线安装-自动重启</p>
+<p>如果是AB分区的机型</p>
+<p>下载系统包-点击更新-在线安装-安装完成-提示重启</p>
+<p>没错，可以一边系统更新一边正常使用手机，没有关机安装更新的步骤，其原理很容易理解</p>
+<p>我的手机有两个分区A和B，我在使用A分区收到系统更新，系统会将系统安装到B分区，安装完成提示重启，就会进入B分区</p>
+<p>好处有很多，比如把手机搞变砖了还可以切换另一个分区继续用</p>
+<p><strong>切换分区</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastboot set_active a## 切换到A分区</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fasterroot%20(14).webp" alt="图片"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastboot set_active b## 切换到B分区</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fasterroot%20(13).webp" alt="图片"></p>
+<p><strong>回锁BL</strong></p>
+<p>在执行回锁指令之前，你必须确定当前系统没有任何修改，否则无法开机。因此回锁操作十分危险。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastboot oem lock</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="小米通用刷回官方系统教程"><a href="#小米通用刷回官方系统教程" class="headerlink" title="小米通用刷回官方系统教程"></a>小米通用刷回官方系统教程</h2><p>此方法并非万能，倘若你的设备无法进入Fastboot，就只能求助售后了</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fastroot%20(14).webp" alt="图片"></p>
+<p>在这里下载你机型的线刷包</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.miui.com/shuaji-393.html">https://www.miui.com/shuaji-393.html</a></p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fasterroot%20(2).png" alt="图片"></p>
+<p>下载通用刷机工具</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fasterroot%20(1).png" alt="图片"></p>
+<p>解压到英文目录的文件夹，如果不懂就直接解压到桌面</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fasterroot%20(12).webp" alt="图片"></p>
+<p>最新线刷包一般两层压缩，还需要解压一次</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fasterroot%20(4).png" alt="图片"></p>
+<p>点进去文件夹能看到这些东西</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fasterroot%20(11).webp" alt="图片"></p>
+<p>解压通用刷机工具并打开这个</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/Y4ts7cXef7nmu3xyWXdTHCDMibCGPoVvldrTlPIVL5ibkFNoB75ichcfbSLpCdpHcftF3WMXYia24jA9p2JT9icsCzg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>点这里安装驱动</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fasterroot%20(9).webp" alt="图片"></p>
+<p>点这里选择解压出来的文件夹</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fasterroot%20(5).webp" alt="图片"></p>
+<p>注意是包含内容的那个文件夹</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fasterroot%20(7).webp" alt="图片"></p>
+<p>如果选错了会有错误提示</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fasterroot%20(6).webp" alt="图片"></p>
+<p>目录必须是全英文</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fasterroot%20(1).webp" alt="图片"></p>
+<p>第1个是常规的刷回，第3个是回锁并刷回(解锁不易，慎重回锁)，第2个是MIUI升级版本</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fasterroot%20(17)%20.webp" alt="图片"></p>
+<p>把手机彻底关机，音量下＋电源键进入兔子模式插上</p>
+<p>是否连接成功取决于你的数据线/电脑接口，可在设备管理器查看</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fasterroot%20(2).webp" alt="图片"></p>
+<p>点击加载设备，就能看到你的手机连上了</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fasterroot%20(1).webp" alt="图片"></p>
+<p>点击刷机开始刷入，一定要保持稳定连接，等待完成</p>
+<p><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/posts/fasterroot%20(17)%20.webp" alt="图片"></p>
+</article><div class="post-tools"><div class="post-tools-left"><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-hamburger"></i> 打赏作者</div><div class="reward-main"><ul class="reward-all"><ul class="reward-group"><li class="reward-item"><a href="https://npm.elemecdn.com/webxc@1.0.0/lxfs/wechat.png" rel="external nofollow noreferrer" target="_blank"><img class="post-qr-code-img" src="https://npm.elemecdn.com/webxc@1.0.0/lxfs/wechat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/webxc@1.0.0/lxfs/alipay.jpg" rel="external nofollow noreferrer" target="_blank"><img class="post-qr-code-img" src="https://npm.elemecdn.com/webxc@1.0.0/lxfs/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/sponsor/#特别鸣谢"><div class="reward-text">赞赏名单</div><div class="reward-dec">感谢给予支持的朋友，您的支持是我前进的动力。</div></a></ul></div></div><div class="post_share"><div class="social-share" data-image="https://npm.elemecdn.com/webxc@1.0.0/cover/root.jpg" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn1.tianli0.top/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://npm.elemecdn.com/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%AE%89%E5%8D%93%E7%8E%A9%E6%9C%BA/">#安卓玩机</a></div></div></div></div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-info"><span>Magisk卡刷-通刷官方-了解Fastboot</span></span></div><div class="post-copyright__type"><span class="post-copyright-info"><a href="https://c.webxc.ml/posts/612580791.html">https://c.webxc.ml/posts/612580791.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-info">本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://c.webxc.ml" target="_blank">XC's Blog</a></span></div></div></div><div id="pagination-con"><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/3667985617.html"><img class="prev-cover" src="https://npm.elemecdn.com/webxc@1.0.0/cover/web2.jpg" onerror="onerror=null;src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">前端免费资源大汇总</div></div></a></div><div class="next-post pull-right"><a href="/posts/369552927.html"><img class="next-cover" src="https://npm.elemecdn.com/webxc@1.0.0/cover/win10.jpg" onerror="onerror=null;src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Windows系统网站-KMS</div></div></a></div></nav></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar"><div class="author-info__sayhi" id="author-info__sayhi">👋 你好！我是</div><div class="author-info__name">XC's Blog</div><div class="author-info__description">我会在这里分享踩过的坑，干货笔记，以及生活中的感悟、吐槽、看法，与君共勉。</div><div class="author-info__description2">精致的五官是心动的开始，迷人的气质是动情的深渊。</div><a class="author-info__avatar" href="/about/"><img class="avatar-background" src="https://cdn1.tianli0.top/gh/realwds/cdn@master/person/awds-79k.png" onerror="this.onerror=null;this.src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="avatar"/></a></div><div class="card-info-social-icons"><a class="social-icon" href="https://c.webxc.ml/"><i class="fab fa-edge"></i></a><a class="social-icon" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/web-xc"><i class="fab fa-github"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content"><p>有问题评论留言，微信不解答问题，添加请注明来意。</p><div class="content_qrcode"><img src="https://npm.elemecdn.com/webxc@1.0.0/lxfs/wechat.jpg" alt="添加微信"></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E6%95%99%E7%A8%8B"><span class="toc-text">开始教程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E9%94%81%E6%89%8B%E6%9C%BAbl%E9%94%81"><span class="toc-text">解锁手机bl锁</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%B7%E5%85%A5%E7%AC%AC%E4%B8%89%E6%96%B9rec"><span class="toc-text">刷入第三方rec</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%B7%E5%85%A5%E7%AC%AC%E4%B8%89%E6%96%B9rec-1"><span class="toc-text">刷入第三方rec</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#root%E7%B3%BB%E7%BB%9F"><span class="toc-text">root系统</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E5%90%8E%E6%80%BB%E7%BB%93%E4%B8%80%E4%B8%8B%E5%85%B3%E4%BA%8E%E7%AC%AC%E4%B8%89%E6%96%B9REC%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E6%8A%80%E5%B7%A7%E5%92%8C%E7%9F%A5%E8%AF%86"><span class="toc-text">最后总结一下关于第三方REC的一些小技巧和知识</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BA%86%E8%A7%A3Fastboot%E6%A8%A1%E5%BC%8F%E5%90%97-%E7%A1%AC%E6%A0%B8%E7%A7%91%E6%99%AE%EF%BC%81"><span class="toc-text">你真的了解Fastboot模式吗? 硬核科普！</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E7%B1%B3%E9%80%9A%E7%94%A8%E5%88%B7%E5%9B%9E%E5%AE%98%E6%96%B9%E7%B3%BB%E7%BB%9F%E6%95%99%E7%A8%8B"><span class="toc-text">小米通用刷回官方系统教程</span></a></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/7f86.html" title="JavaScript 第四天"><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/postss/js1.jpg" onerror="this.onerror=null;this.src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="JavaScript 第四天"/></a><div class="content"><a class="title" href="/posts/7f86.html" title="JavaScript 第四天">JavaScript 第四天</a><time datetime="2023-02-07T06:00:00.000Z" title="发表于 2023-02-07 14:00:00">2023-02-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/6e+47.html" title="JavaScript 第三天"><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/postss/js1.jpg" onerror="this.onerror=null;this.src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="JavaScript 第三天"/></a><div class="content"><a class="title" href="/posts/6e+47.html" title="JavaScript 第三天">JavaScript 第三天</a><time datetime="2022-12-27T15:30:00.000Z" title="发表于 2022-12-27 23:30:00">2022-12-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/623e.html" title="JavaScript 第二天"><img src="https://cdn1.tianli0.top/gh/web-xc/iMG/postss/js1.jpg" onerror="this.onerror=null;this.src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="JavaScript 第二天"/></a><div class="content"><a class="title" href="/posts/623e.html" title="JavaScript 第二天">JavaScript 第二天</a><time datetime="2022-12-05T09:00:00.000Z" title="发表于 2022-12-05 17:00:00">2022-12-05</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-social"><a class="deal_link" href="https://github.com/web-xc" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="deal_link" href="https://gitlab.com/web-xc" rel="external nofollow noreferrer" target="_blank" title="GitLab"><i class="fab fa-gitlab"></i></a><a class="deal_link" href="https://gitee.com/web-xc" rel="external nofollow noreferrer" target="_blank" title="Gitee"><i class="fab fa-github-alt"></i></a><img class="footer_mini_logo" src="https://npm.elemecdn.com/webxc@1.0.0/logo/logo.jpg" onerror="this.onerror=null;this.src='https://cdn1.tianli0.top/gh/realwds/cdn@master/blog/404.jpg'" alt="回到顶部" onclick="btf.scrollToDest(0,500)"/><a class="deal_link" href="tencent://message/?uin=2848141597&amp;Site=&amp;Menu=yes" rel="external nofollow noreferrer" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="deal_link" href="mailto:2848141597@qq.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="deal_link" href="/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss"></i></a></div><div id="footer-container"><div class="footer-group"><h3 class="footer-title">关于</h3><div class="footer-links"><a class="footer-item" href="/about/">关于本站</a><a class="footer-item" href="/sponsor/">赞赏博主</a><a class="footer-item" href="/statistics/">博客统计</a></div></div><div class="footer-group"><h3 class="footer-title">文章</h3><div class="footer-links"><a class="footer-item" href="/archives/">文章列表</a><a class="footer-item" href="/categories/">全部分类</a><a class="footer-item" href="/tags/">全部标签</a></div></div><div class="footer-group"><h3 class="footer-title">分类</h3><div class="footer-links"><a class="footer-item" href="/categories/JavaScript笔记/">JavaScript笔记</a><a class="footer-item" href="/categories/移动开发/">移动开发</a><a class="footer-item" href="/categories/学习笔记-CSS/">学习笔记-CSS</a></div></div><div class="footer-group"><h3 class="footer-title">生活</h3><div class="footer-links"><a class="footer-item" href="/essay/">随笔说说</a><a class="footer-item" href="/talking/">生活杂谈</a><a class="footer-item" href="学习笔记-HTML">学习笔记-HTML</a></div></div><div class="footer-group"><h3 class="footer-title">导航</h3><div class="footer-links"><a class="footer-item" href="/link/">友情链接</a><a class="footer-item" href="/tools/">在线工具</a><a class="footer-item" href="https://blog1.webxc.ml" rel="external nofollow noreferrer" target="_blank">Qexo管理</a></div></div><div class="footer-group"><h3 class="footer-title">协议</h3><div class="footer-links"><a class="footer-item" href="/privacy/">隐私协议</a><a class="footer-item" href="/copyright/">版权声明</a><a class="footer-item" href="/tousu/">侵权投诉</a></div></div></div><div id="footer-banner"><div class="footer-banner-links"><div class="footer-banner-left"><span class="copyright">&copy;2021 - 2023 By XC's Blog</span></div><div class="footer-banner-right"><a class="footer-banner-link" target="_blank" href="https://realwds.com" rel="external nofollow noreferrer">XC's Blog</a></div></div></div><script src="https://cdn1.tianli0.top/gh/briangonzalez/rgbaster.js@1.1.0/rgbaster.min.js"></script><script data-pjax="data-pjax" src="https://cdn1.tianli0.top/gh/web-xc/blog1/js/custom/realwds.js"></script><div class="js-pjax"><script>coverColor(),sayhi()</script></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-tip">搜搜看，说不定你就发现了我 🙊</div><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="https://cdn1.tianli0.top/gh/realwds/cdn/js/realwds-blog-utils.min.js"></script><script src="https://npm.elemecdn.com/hexo-theme-butterfly@3.7.1/source/js/main.js"></script><script defer src="https://npm.elemecdn.com/node-snackbar/dist/snackbar.min.js"></script><script defer src="https://npm.elemecdn.com/hexo-theme-butterfly@3.7.1/source/js/search/local-search.js"></script><div class="js-pjax"><script>(()=>{
+  const $countDom = document.getElementById('twikoo-count')
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://blog2.webxc.ml/',
+      region: ''
+    }, null))
+  }
+
+  const getCount = () => {
+    twikoo.getCommentsCount({
+      envId: 'https://blog2.webxc.ml/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      $countDom.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const loadTwikoo = (bool = false) => {
+    if (typeof twikoo === 'object') {
+      init()
+      bool && $countDom && setTimeout(getCount,0)
+    } else {
+      getScript('https://npm.elemecdn.com/twikoo/dist/twikoo.all.min.js').then(()=> {
+        init()
+        bool && $countDom && setTimeout(getCount,0)
+      })
+    }
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo(true)
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script data-pjax src="https://npm.elemecdn.com/pace-js@1.2.4/pace.min.js"></script><script src="https://npm.elemecdn.com/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/talking/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//npm.elemecdn.com/penndu@1.0.0/bsz.js"></script></div></body></html>
